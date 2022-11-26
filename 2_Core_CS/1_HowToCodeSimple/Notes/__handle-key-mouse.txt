@@ -1,0 +1,15 @@
+(define (handle-key ws ke)
+        (cond [(key=? ke " ") (... ws)]
+              [else
+                (... ws)]))
+
+(define (handle-mouse ws x y me)
+        (cond [(mouse=? me "button-down") (... ws x y)]
+              [else
+                (... ws x y)]))
+
+=================
+
+x, y  adalah input dari lokasi x dan y mouse di MTS
+me,ke adalah input yang diberikan mouse/keyboard
+ws    adalah data type (bebas)

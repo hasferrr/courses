@@ -1,0 +1,31 @@
+(define-struct person (name gender children))
+;; Person is (make-person String Gender ListOfPerson)
+;; interp. a person with first name, gender and a list of their children
+
+;; ListOfPerson is one of:
+;; - empty
+;; (cons Person ListOfPerson)
+;; interp. a list of persons
+
+;; Gender is one of:
+;; - "M"
+;; - "F"
+;; interp. "M" means male, "F" means female
+
+(define (fn-for-person p)
+  (... (person-name p) ;String
+       (fn-for-gender (person-gender p))
+       (fn-for-lop (person-children p))))
+
+(define (fn-for-lop lop)
+  (cond [(empty? lop) (...)]
+        [else
+          (... (fn-for-person (first lop))
+               (fn-for-lop (rest lop))
+               )]
+        ))
+
+(define (fn-for-gender g)
+  (cond [(string=? g "M") (...)]
+        [(string=? g "F") (...)])
+  )

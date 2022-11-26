@@ -1,0 +1,55 @@
+This design quiz will have 3 phases:
+
+    - In step one you will design a solution to a given problem.
+    - In step two you will watch the assessment tutorial video (in the next tab).
+    - In step three you will do a self-assessment of your solution.
+
+___________________________________________________________________________________________
+|                                                                                         |
+| PROBLEM:                                                                                |
+|                                                                                         |
+| Download the starter file and complete problems 1 through 4.                            |
+|                                                                                         |
+| You should use the How to Design Data (HtDD) and                                        |
+| the How to Design Functions (HtDF) recipe when each is necessary.                       |
+|                                                                                         |
+| You should do all your design work in DrRacket. Following the step-by-step recipe       |
+| in DrRacket will help you be sure that you have a quality solutions for each problem    |
+| that work correctly.                                                                    |
+|_________________________________________________________________________________________|
+
+For this quiz you will be asked to design a function using the HtDF recipe.
+Your solution will be assessed according to the following rubric:
+
+    1. Is the program safe?
+        The program file should be set to use the Beginning Student Language and
+        should have no require declarations in it at all.
+
+    2. Is the program "commit ready"?
+        The file should be neat and tidy, no tests or code should be commented out
+        other than stubs and templates and all scratch work should be removed.
+        The indentation should conform to course conventions and typing CMD-I
+        (CTL-I on Windows) should not move anything. (But note that limitations
+        of the peer tool mean that indentation can only be self-assessed.)
+
+    3. Is the design complete?
+        All HtDD and HtDF design elements should be present, and each element
+        should be well-formed.
+
+    4. Does the design have high internal quality?
+        For Data Definitions, the type comments should be correct,
+        and the interpretations should be clear. The examples should cover all cases,
+        and the template should be complete with the correct template rules used.
+        For function designs, the signature should be correct, the purpose
+        should be clear and succinct, the examples should be sufficient to test and
+        explain the function. The function name should be well chosen and
+        should describe what the function does, not how it does it.
+        The stub should match the signature. The template should be correct.
+        The function body should be clear. When the program is run all the tests should pass,
+        and those tests should cover the entire program.
+
+    5. Does the design satisfy the problem requirements?
+        The design solutions should satisfy the problem statements.
+        If there is any ambiguity in the problem statements the solution
+        should identify and resolve that ambiguity.
+
