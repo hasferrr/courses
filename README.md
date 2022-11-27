@@ -16,4 +16,4 @@ Some CS courses I took.
 ### Core CS
 
 - [How to Code - Simple Data](2_Core_CS/1_HowToCodeSimple)
-- [How to Code - Complex Data](2_Core_CS/2_HowToCodeComplex)
+- [How to Code - Complex Data](2_Core_CS/2_HowToCodeComplex) *(doing)*
