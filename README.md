@@ -1,16 +1,12 @@
-# Introduction
+# courses
 
-Hello, it's me, hasferrr, who spend most of the time in computer. I'm from Indonesia. I majored in Accounting.
+This is online computer science courses I took and am currently going through. I mostly followed the [OSSU](https://github.com/ossu/computer-science) curriculum. The files in this repository mostly contain my solutions to problem sets, quizzes, and the final project for each course that OSSU provides.
 
-Even though I'm not in CS major or IT-related major, I'm really interested in programming and computer science. Why? because I enjoy it soo much, and also math. I'm taking a CS course not just as a hobby, but also to improve my skills. I mostly studying through [OSSU](https://github.com/ossu/computer-science/).
-
-## My Courses
-
-Some CS courses I took.
+> taking computer science courses while in college (because I'm  currently studying at a one university in Indonesia majoring in Accounting (not CS or IT (LOL))) is quite difficult because I have to divide my time between them.
 
 ### Intro CS
 
-- Some programming tutorial in YouTube/Internet
+- Programming tutorial in YouTube/Internet
 - [CS50x - CS50's Introduction to Computer Science](1_Intro_CS/CS50x)
 
 ### Core CS
