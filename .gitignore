@@ -1,2 +1,4 @@
 *.lnk
-.ignore/*
+*.bak
+**/.ignore/*
+**/.gitignore
