@@ -1,6 +1,6 @@
 <img src="https://img.icons8.com/color/480/null/code-folder.png" align="right" width="120px"/>
 
-# computer-science
+# Computer Science
 
 ## Introduction
 
@@ -18,10 +18,24 @@ My progress:
 
 ### Intro CS
 
-- Programming tutorial in YouTube/Internet
-- [CS50x - CS50's Introduction to Computer Science](1_Intro_CS/CS50x)
+#### Introduction to Programming and Computer Science
+
+Courses | Duration | Final Project
+:-- | :--: | :--:
+Programming tutorial in YouTube/Internet | | [github.com/hasferrr](https://github.com/hasferrr)
+[CS50x - CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/) | 10.43 weeks | [Wallet - Track your Income & Expenses](https://github.com/hasferrr/wallet)
 
 ### Core CS
 
-- [How to Code - Simple Data](2_Core_CS/1_HowToCodeSimple)
-- [How to Code - Complex Data](2_Core_CS/2_HowToCodeComplex) *(doing)*
+#### Core programming
+
+Courses | Duration | Final Project
+:-- | :--: | :--:
+[How to Code - Simple Data](https://www.edx.org/course/how-to-code-simple-data) | 7.14 weeks | [Space Invader](2_Core_CS/1_HowToCodeSimple/Final_Project)
+[How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data) | | *(doing)*
+[Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) |
+[Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) |
+[Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) |
+[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) |
+[Design Patterns](https://www.coursera.org/learn/design-patterns) |
+[Software Architecture](https://www.coursera.org/learn/software-architecture) |
