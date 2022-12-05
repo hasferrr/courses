@@ -12,6 +12,10 @@ This is online computer science courses I took and am currently going through. I
 
 Some CS Courses I took and currently doing.
 
+My progress:
+- [OSSU CS Timeline - Google Spreadsheet](https://docs.google.com/spreadsheets/d/1w45IvRvgfUtbaNuHanKa2BeP8pjcueBCVTOZKnvo4QU/edit?usp=sharing)
+- [OSSU - Computer Science | Trello](https://trello.com/b/AJEUSOVK)
+
 ### Intro CS
 
 - Programming tutorial in YouTube/Internet
