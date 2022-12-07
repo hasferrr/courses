@@ -1,0 +1,1607 @@
+pause
+
+if(Test-Path __convert-to-plaintext.rkt){}
+else{
+    Write-host "converter doesnt exist"
+    Break
+}
+
+$text = "   This file uses the GRacket editor format."
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\function-definitions-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\function-definitions-starter.rkt -NewName function-definitions-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\function-definitions-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\function-definitions-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\function-definitions-starter___BAK.rkt
+    Write-host "function-definitions-starter.rkt DONE"
+}
+else{
+    Write-host "function-definitions-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\pythag-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\pythag-starter.rkt -NewName pythag-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\pythag-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\pythag-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\pythag-starter___BAK.rkt
+    Write-host "pythag-starter.rkt DONE"
+}
+else{
+    Write-host "pythag-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\stepper-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\stepper-starter.rkt -NewName stepper-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\stepper-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\stepper-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\stepper-starter___BAK.rkt
+    Write-host "stepper-starter.rkt DONE"
+}
+else{
+    Write-host "stepper-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\compare-images-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\compare-images-starter.rkt -NewName compare-images-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\compare-images-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\compare-images-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\compare-images-starter___BAK.rkt
+    Write-host "compare-images-starter.rkt DONE"
+}
+else{
+    Write-host "compare-images-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\foo-evaluation-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\foo-evaluation-starter.rkt -NewName foo-evaluation-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\foo-evaluation-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\foo-evaluation-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\foo-evaluation-starter___BAK.rkt
+    Write-host "foo-evaluation-starter.rkt DONE"
+}
+else{
+    Write-host "foo-evaluation-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\function-writing-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\function-writing-starter.rkt -NewName function-writing-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\function-writing-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\function-writing-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\function-writing-starter___BAK.rkt
+    Write-host "function-writing-starter.rkt DONE"
+}
+else{
+    Write-host "function-writing-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-arithmetic-expression-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-arithmetic-expression-starter.rkt -NewName more-arithmetic-expression-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-arithmetic-expression-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-arithmetic-expression-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-arithmetic-expression-starter___BAK.rkt
+    Write-host "more-arithmetic-expression-starter.rkt DONE"
+}
+else{
+    Write-host "more-arithmetic-expression-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-foo-evaluation-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-foo-evaluation-starter.rkt -NewName more-foo-evaluation-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-foo-evaluation-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-foo-evaluation-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\more-foo-evaluation-starter___BAK.rkt
+    Write-host "more-foo-evaluation-starter.rkt DONE"
+}
+else{
+    Write-host "more-foo-evaluation-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\tile-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\tile-starter.rkt -NewName tile-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\tile-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\tile-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\tile-starter___BAK.rkt
+    Write-host "tile-starter.rkt DONE"
+}
+else{
+    Write-host "tile-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\compare-images-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\compare-images-solution.rkt -NewName compare-images-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\compare-images-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\compare-images-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\compare-images-solution___BAK.rkt
+    Write-host "compare-images-solution.rkt DONE"
+}
+else{
+    Write-host "compare-images-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\foo-evaluation-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\foo-evaluation-solution.rkt -NewName foo-evaluation-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\foo-evaluation-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\foo-evaluation-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\foo-evaluation-solution___BAK.rkt
+    Write-host "foo-evaluation-solution.rkt DONE"
+}
+else{
+    Write-host "foo-evaluation-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\function-writing-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\function-writing-solution.rkt -NewName function-writing-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\function-writing-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\function-writing-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\function-writing-solution___BAK.rkt
+    Write-host "function-writing-solution.rkt DONE"
+}
+else{
+    Write-host "function-writing-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-arithmetic-expression-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-arithmetic-expression-solution.rkt -NewName more-arithmetic-expression-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-arithmetic-expression-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-arithmetic-expression-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-arithmetic-expression-solution___BAK.rkt
+    Write-host "more-arithmetic-expression-solution.rkt DONE"
+}
+else{
+    Write-host "more-arithmetic-expression-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-foo-evaluation-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-foo-evaluation-solution.rkt -NewName more-foo-evaluation-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-foo-evaluation-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-foo-evaluation-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\more-foo-evaluation-solution___BAK.rkt
+    Write-host "more-foo-evaluation-solution.rkt DONE"
+}
+else{
+    Write-host "more-foo-evaluation-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\tile-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\tile-solution.rkt -NewName tile-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\tile-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\tile-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1a_BSL\practice_problem\solution\tile-solution___BAK.rkt
+    Write-host "tile-solution.rkt DONE"
+}
+else{
+    Write-host "tile-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\area-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\area-starter.rkt -NewName area-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\area-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\area-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\area-starter___BAK.rkt
+    Write-host "area-starter.rkt DONE"
+}
+else{
+    Write-host "area-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\double-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\double-starter.rkt -NewName double-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\double-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\double-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\double-starter___BAK.rkt
+    Write-host "double-starter.rkt DONE"
+}
+else{
+    Write-host "double-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\image-area-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\image-area-starter.rkt -NewName image-area-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\image-area-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\image-area-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\image-area-starter___BAK.rkt
+    Write-host "image-area-starter.rkt DONE"
+}
+else{
+    Write-host "image-area-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\tall-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\tall-starter.rkt -NewName tall-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\tall-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\tall-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\tall-starter___BAK.rkt
+    Write-host "tall-starter.rkt DONE"
+}
+else{
+    Write-host "tall-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\yell-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\yell-starter.rkt -NewName yell-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\yell-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\yell-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\yell-starter___BAK.rkt
+    Write-host "yell-starter.rkt DONE"
+}
+else{
+    Write-host "yell-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-solution.rkt -NewName boxify-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-solution___BAK.rkt
+    Write-host "boxify-solution.rkt DONE"
+}
+else{
+    Write-host "boxify-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-starter.rkt -NewName boxify-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\boxify-starter___BAK.rkt
+    Write-host "boxify-starter.rkt DONE"
+}
+else{
+    Write-host "boxify-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-solution.rkt -NewName double-error-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-solution___BAK.rkt
+    Write-host "double-error-solution.rkt DONE"
+}
+else{
+    Write-host "double-error-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-starter.rkt -NewName double-error-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\double-error-starter___BAK.rkt
+    Write-host "double-error-starter.rkt DONE"
+}
+else{
+    Write-host "double-error-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-solution.rkt -NewName less-than-five-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-solution___BAK.rkt
+    Write-host "less-than-five-solution.rkt DONE"
+}
+else{
+    Write-host "less-than-five-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-starter.rkt -NewName less-than-five-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Practice_Problems\less-than-five-starter___BAK.rkt
+    Write-host "less-than-five-starter.rkt DONE"
+}
+else{
+    Write-host "less-than-five-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Quiz\01-HtDfDesignQuiz.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Quiz\01-HtDfDesignQuiz.rkt -NewName 01-HtDfDesignQuiz___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Quiz\01-HtDfDesignQuiz___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Quiz\01-HtDfDesignQuiz.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\1b_HtDF\Quiz\01-HtDfDesignQuiz___BAK.rkt
+    Write-host "01-HtDfDesignQuiz.rkt DONE"
+}
+else{
+    Write-host "01-HtDfDesignQuiz.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\aisle-starter___HtDF_with_Interval.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\aisle-starter___HtDF_with_Interval.rkt -NewName aisle-starter___HtDF_with_Interval___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\aisle-starter___HtDF_with_Interval___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\aisle-starter___HtDF_with_Interval.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\aisle-starter___HtDF_with_Interval___BAK.rkt
+    Write-host "aisle-starter___HtDF_with_Interval.rkt DONE"
+}
+else{
+    Write-host "aisle-starter___HtDF_with_Interval.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\best-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\best-starter.rkt -NewName best-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\best-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\best-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\best-starter___BAK.rkt
+    Write-host "best-starter.rkt DONE"
+}
+else{
+    Write-host "best-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\bump-up-starter___HtDF_with_Enumeration.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\bump-up-starter___HtDF_with_Enumeration.rkt -NewName bump-up-starter___HtDF_with_Enumeration___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\bump-up-starter___HtDF_with_Enumeration___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\bump-up-starter___HtDF_with_Enumeration.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\bump-up-starter___HtDF_with_Enumeration___BAK.rkt
+    Write-host "bump-up-starter___HtDF_with_Enumeration.rkt DONE"
+}
+else{
+    Write-host "bump-up-starter___HtDF_with_Enumeration.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\city-name-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\city-name-starter.rkt -NewName city-name-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\city-name-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\city-name-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\city-name-starter___BAK.rkt
+    Write-host "city-name-starter.rkt DONE"
+}
+else{
+    Write-host "city-name-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\cond-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\cond-starter.rkt -NewName cond-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\cond-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\cond-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\cond-starter___BAK.rkt
+    Write-host "cond-starter.rkt DONE"
+}
+else{
+    Write-host "cond-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-starter-ITEMIZATION.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-starter-ITEMIZATION.rkt -NewName countdown-starter-ITEMIZATION___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-starter-ITEMIZATION___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-starter-ITEMIZATION.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-starter-ITEMIZATION___BAK.rkt
+    Write-host "countdown-starter-ITEMIZATION.rkt DONE"
+}
+else{
+    Write-host "countdown-starter-ITEMIZATION.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-to-display-starter___HtDF_with_Itemization.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-to-display-starter___HtDF_with_Itemization.rkt -NewName countdown-to-display-starter___HtDF_with_Itemization___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-to-display-starter___HtDF_with_Itemization___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-to-display-starter___HtDF_with_Itemization.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\countdown-to-display-starter___HtDF_with_Itemization___BAK.rkt
+    Write-host "countdown-to-display-starter___HtDF_with_Itemization.rkt DONE"
+}
+else{
+    Write-host "countdown-to-display-starter___HtDF_with_Itemization.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\letter-grade-starter-ENUMERATION.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\letter-grade-starter-ENUMERATION.rkt -NewName letter-grade-starter-ENUMERATION___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\letter-grade-starter-ENUMERATION___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\letter-grade-starter-ENUMERATION.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\letter-grade-starter-ENUMERATION___BAK.rkt
+    Write-host "letter-grade-starter-ENUMERATION.rkt DONE"
+}
+else{
+    Write-host "letter-grade-starter-ENUMERATION.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\next-color-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\next-color-starter.rkt -NewName next-color-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\next-color-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\next-color-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\next-color-starter___BAK.rkt
+    Write-host "next-color-starter.rkt DONE"
+}
+else{
+    Write-host "next-color-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\seat-num-starter-INTERVAL.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\seat-num-starter-INTERVAL.rkt -NewName seat-num-starter-INTERVAL___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\seat-num-starter-INTERVAL___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\seat-num-starter-INTERVAL.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\seat-num-starter-INTERVAL___BAK.rkt
+    Write-host "seat-num-starter-INTERVAL.rkt DONE"
+}
+else{
+    Write-host "seat-num-starter-INTERVAL.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-solution.rkt -NewName demolish-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-solution___BAK.rkt
+    Write-host "demolish-solution.rkt DONE"
+}
+else{
+    Write-host "demolish-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-starter.rkt -NewName demolish-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\demolish-starter___BAK.rkt
+    Write-host "demolish-starter.rkt DONE"
+}
+else{
+    Write-host "demolish-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-solution.rkt -NewName rocket-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-solution___BAK.rkt
+    Write-host "rocket-solution.rkt DONE"
+}
+else{
+    Write-host "rocket-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-starter.rkt -NewName rocket-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem\rocket-starter___BAK.rkt
+    Write-host "rocket-starter.rkt DONE"
+}
+else{
+    Write-host "rocket-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-solution.rkt -NewName bike-route-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-solution___BAK.rkt
+    Write-host "bike-route-solution.rkt DONE"
+}
+else{
+    Write-host "bike-route-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-starter.rkt -NewName bike-route-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\bike-route-starter___BAK.rkt
+    Write-host "bike-route-starter.rkt DONE"
+}
+else{
+    Write-host "bike-route-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-solution.rkt -NewName dinner-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-solution___BAK.rkt
+    Write-host "dinner-solution.rkt DONE"
+}
+else{
+    Write-host "dinner-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-starter.rkt -NewName dinner-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\dinner-starter___BAK.rkt
+    Write-host "dinner-starter.rkt DONE"
+}
+else{
+    Write-host "dinner-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-solution.rkt -NewName direction-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-solution___BAK.rkt
+    Write-host "direction-solution.rkt DONE"
+}
+else{
+    Write-host "direction-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-starter.rkt -NewName direction-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\direction-starter___BAK.rkt
+    Write-host "direction-starter.rkt DONE"
+}
+else{
+    Write-host "direction-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-solution.rkt -NewName employees-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-solution___BAK.rkt
+    Write-host "employees-solution.rkt DONE"
+}
+else{
+    Write-host "employees-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-starter.rkt -NewName employees-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\employees-starter___BAK.rkt
+    Write-host "employees-starter.rkt DONE"
+}
+else{
+    Write-host "employees-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-solution.rkt -NewName letter-grade-error-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-solution___BAK.rkt
+    Write-host "letter-grade-error-solution.rkt DONE"
+}
+else{
+    Write-host "letter-grade-error-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-starter.rkt -NewName letter-grade-error-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\letter-grade-error-starter___BAK.rkt
+    Write-host "letter-grade-error-starter.rkt DONE"
+}
+else{
+    Write-host "letter-grade-error-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-solution.rkt -NewName style-rules-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-solution___BAK.rkt
+    Write-host "style-rules-solution.rkt DONE"
+}
+else{
+    Write-host "style-rules-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-starter.rkt -NewName style-rules-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Practice_Problem___More\style-rules-starter___BAK.rkt
+    Write-host "style-rules-starter.rkt DONE"
+}
+else{
+    Write-host "style-rules-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDD-Design-Quiz-SOLUTION.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDD-Design-Quiz-SOLUTION.rkt -NewName HtDD-Design-Quiz-SOLUTION___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDD-Design-Quiz-SOLUTION___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDD-Design-Quiz-SOLUTION.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDD-Design-Quiz-SOLUTION___BAK.rkt
+    Write-host "HtDD-Design-Quiz-SOLUTION.rkt DONE"
+}
+else{
+    Write-host "HtDD-Design-Quiz-SOLUTION.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDDDesignQuiz.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDDDesignQuiz.rkt -NewName HtDDDesignQuiz___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDDDesignQuiz___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDDDesignQuiz.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\2_HtDD\Quiz\HtDDDesignQuiz___BAK.rkt
+    Write-host "HtDDDesignQuiz.rkt DONE"
+}
+else{
+    Write-host "HtDDDesignQuiz.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-starter.rkt -NewName cat-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-starter___BAK.rkt
+    Write-host "cat-starter.rkt DONE"
+}
+else{
+    Write-host "cat-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v1.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v1.rkt -NewName cat-v1___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v1___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v1.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v1___BAK.rkt
+    Write-host "cat-v1.rkt DONE"
+}
+else{
+    Write-host "cat-v1.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v2.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v2.rkt -NewName cat-v2___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v2___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v2.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\cat-v2___BAK.rkt
+    Write-host "cat-v2.rkt DONE"
+}
+else{
+    Write-host "cat-v2.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-solution.rkt -NewName countdown-animation-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-solution___BAK.rkt
+    Write-host "countdown-animation-solution.rkt DONE"
+}
+else{
+    Write-host "countdown-animation-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-starter.rkt -NewName countdown-animation-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\countdown-animation-starter___BAK.rkt
+    Write-host "countdown-animation-starter.rkt DONE"
+}
+else{
+    Write-host "countdown-animation-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-solution.rkt -NewName traffic-light-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-solution___BAK.rkt
+    Write-host "traffic-light-solution.rkt DONE"
+}
+else{
+    Write-host "traffic-light-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-starter.rkt -NewName traffic-light-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems\traffic-light-starter___BAK.rkt
+    Write-host "traffic-light-starter.rkt DONE"
+}
+else{
+    Write-host "traffic-light-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\add-mouse-handler-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\add-mouse-handler-starter.rkt -NewName add-mouse-handler-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\add-mouse-handler-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\add-mouse-handler-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\add-mouse-handler-starter___BAK.rkt
+    Write-host "add-mouse-handler-starter.rkt DONE"
+}
+else{
+    Write-host "add-mouse-handler-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\SOLUTION-cat-v4.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\SOLUTION-cat-v4.rkt -NewName SOLUTION-cat-v4___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\SOLUTION-cat-v4___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\SOLUTION-cat-v4.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3a_HtDW\Practice_Problems___More\SOLUTION-cat-v4___BAK.rkt
+    Write-host "SOLUTION-cat-v4.rkt DONE"
+}
+else{
+    Write-host "SOLUTION-cat-v4.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\compound-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\compound-starter.rkt -NewName compound-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\compound-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\compound-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\compound-starter___BAK.rkt
+    Write-host "compound-starter.rkt DONE"
+}
+else{
+    Write-host "compound-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-starter.rkt -NewName cowabunga-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-starter___BAK.rkt
+    Write-host "cowabunga-starter.rkt DONE"
+}
+else{
+    Write-host "cowabunga-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v0.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v0.rkt -NewName cowabunga-v0___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v0___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v0.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v0___BAK.rkt
+    Write-host "cowabunga-v0.rkt DONE"
+}
+else{
+    Write-host "cowabunga-v0.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v1.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v1.rkt -NewName cowabunga-v1___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v1___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v1.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v1___BAK.rkt
+    Write-host "cowabunga-v1.rkt DONE"
+}
+else{
+    Write-host "cowabunga-v1.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v2.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v2.rkt -NewName cowabunga-v2___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v2___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v2.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v2___BAK.rkt
+    Write-host "cowabunga-v2.rkt DONE"
+}
+else{
+    Write-host "cowabunga-v2.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v3.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v3.rkt -NewName cowabunga-v3___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v3___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v3.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\cowabunga-v3___BAK.rkt
+    Write-host "cowabunga-v3.rkt DONE"
+}
+else{
+    Write-host "cowabunga-v3.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Design_Quiz\HtDW-QUIZ-FlowerAnim.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Design_Quiz\HtDW-QUIZ-FlowerAnim.rkt -NewName HtDW-QUIZ-FlowerAnim___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Design_Quiz\HtDW-QUIZ-FlowerAnim___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Design_Quiz\HtDW-QUIZ-FlowerAnim.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Design_Quiz\HtDW-QUIZ-FlowerAnim___BAK.rkt
+    Write-host "HtDW-QUIZ-FlowerAnim.rkt DONE"
+}
+else{
+    Write-host "HtDW-QUIZ-FlowerAnim.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-solution.rkt -NewName movie-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-solution___BAK.rkt
+    Write-host "movie-solution.rkt DONE"
+}
+else{
+    Write-host "movie-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-starter.rkt -NewName movie-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\movie-starter___BAK.rkt
+    Write-host "movie-starter.rkt DONE"
+}
+else{
+    Write-host "movie-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-solution.rkt -NewName student-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-solution___BAK.rkt
+    Write-host "student-solution.rkt DONE"
+}
+else{
+    Write-host "student-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-starter.rkt -NewName student-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Compound_Data_Definition\student-starter___BAK.rkt
+    Write-host "student-starter.rkt DONE"
+}
+else{
+    Write-host "student-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-solution.rkt -NewName water-balloon-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-solution___BAK.rkt
+    Write-host "water-balloon-solution.rkt DONE"
+}
+else{
+    Write-host "water-balloon-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-starter.rkt -NewName water-balloon-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\3b_Compound_Data\Practice_Problem\water-balloon-starter___BAK.rkt
+    Write-host "water-balloon-starter.rkt DONE"
+}
+else{
+    Write-host "water-balloon-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\designing-with-lists-1-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\designing-with-lists-1-starter.rkt -NewName designing-with-lists-1-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\designing-with-lists-1-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\designing-with-lists-1-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\designing-with-lists-1-starter___BAK.rkt
+    Write-host "designing-with-lists-1-starter.rkt DONE"
+}
+else{
+    Write-host "designing-with-lists-1-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-recap-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-recap-starter.rkt -NewName quidditch-recap-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-recap-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-recap-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-recap-starter___BAK.rkt
+    Write-host "quidditch-recap-starter.rkt DONE"
+}
+else{
+    Write-host "quidditch-recap-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-starter.rkt -NewName quidditch-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\quidditch-starter___BAK.rkt
+    Write-host "quidditch-starter.rkt DONE"
+}
+else{
+    Write-host "quidditch-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-solution.rkt -NewName boolean-list-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-solution___BAK.rkt
+    Write-host "boolean-list-solution.rkt DONE"
+}
+else{
+    Write-host "boolean-list-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-starter.rkt -NewName boolean-list-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\boolean-list-starter___BAK.rkt
+    Write-host "boolean-list-starter.rkt DONE"
+}
+else{
+    Write-host "boolean-list-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-solution.rkt -NewName double-all-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-solution___BAK.rkt
+    Write-host "double-all-solution.rkt DONE"
+}
+else{
+    Write-host "double-all-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-starter.rkt -NewName double-all-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\double-all-starter___BAK.rkt
+    Write-host "double-all-starter.rkt DONE"
+}
+else{
+    Write-host "double-all-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-solution.rkt -NewName image-list-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-solution___BAK.rkt
+    Write-host "image-list-solution.rkt DONE"
+}
+else{
+    Write-host "image-list-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-starter.rkt -NewName image-list-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\image-list-starter___BAK.rkt
+    Write-host "image-list-starter.rkt DONE"
+}
+else{
+    Write-host "image-list-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-solution.rkt -NewName largest-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-solution___BAK.rkt
+    Write-host "largest-solution.rkt DONE"
+}
+else{
+    Write-host "largest-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-starter.rkt -NewName largest-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems\largest-starter___BAK.rkt
+    Write-host "largest-starter.rkt DONE"
+}
+else{
+    Write-host "largest-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-solution.rkt -NewName total-string-length-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-solution___BAK.rkt
+    Write-host "total-string-length-solution.rkt DONE"
+}
+else{
+    Write-host "total-string-length-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-starter.rkt -NewName total-string-length-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\total-string-length-starter___BAK.rkt
+    Write-host "total-string-length-starter.rkt DONE"
+}
+else{
+    Write-host "total-string-length-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-solution.rkt -NewName yell-all-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-solution___BAK.rkt
+    Write-host "yell-all-solution.rkt DONE"
+}
+else{
+    Write-host "yell-all-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-starter.rkt -NewName yell-all-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4a_Self-Reference\Practice_Problems___More\yell-all-starter___BAK.rkt
+    Write-host "yell-all-starter.rkt DONE"
+}
+else{
+    Write-host "yell-all-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-starter.rkt -NewName tuition-graph-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-starter___BAK.rkt
+    Write-host "tuition-graph-starter.rkt DONE"
+}
+else{
+    Write-host "tuition-graph-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-v3.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-v3.rkt -NewName tuition-graph-v3___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-v3___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-v3.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\tuition-graph-v3___BAK.rkt
+    Write-host "tuition-graph-v3.rkt DONE"
+}
+else{
+    Write-host "tuition-graph-v3.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-solution.rkt -NewName alternative-tuition-graph-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-solution___BAK.rkt
+    Write-host "alternative-tuition-graph-solution.rkt DONE"
+}
+else{
+    Write-host "alternative-tuition-graph-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-starter.rkt -NewName alternative-tuition-graph-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\alternative-tuition-graph-starter___BAK.rkt
+    Write-host "alternative-tuition-graph-starter.rkt DONE"
+}
+else{
+    Write-host "alternative-tuition-graph-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-solution.rkt -NewName spinning-bears-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-solution___BAK.rkt
+    Write-host "spinning-bears-solution.rkt DONE"
+}
+else{
+    Write-host "spinning-bears-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-starter.rkt -NewName spinning-bears-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems\spinning-bears-starter___BAK.rkt
+    Write-host "spinning-bears-starter.rkt DONE"
+}
+else{
+    Write-host "spinning-bears-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-solution.rkt -NewName tuition-graph-c-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-solution___BAK.rkt
+    Write-host "tuition-graph-c-solution.rkt DONE"
+}
+else{
+    Write-host "tuition-graph-c-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-starter.rkt -NewName tuition-graph-c-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\4b_Reference\Practice_Problems___More\tuition-graph-c-starter___BAK.rkt
+    Write-host "tuition-graph-c-starter.rkt DONE"
+}
+else{
+    Write-host "tuition-graph-c-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\naturals-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\naturals-starter.rkt -NewName naturals-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\naturals-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\naturals-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\naturals-starter___BAK.rkt
+    Write-host "naturals-starter.rkt DONE"
+}
+else{
+    Write-host "naturals-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-solution.rkt -NewName new-numerals-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-solution___BAK.rkt
+    Write-host "new-numerals-solution.rkt DONE"
+}
+else{
+    Write-host "new-numerals-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-starter.rkt -NewName new-numerals-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\new-numerals-starter___BAK.rkt
+    Write-host "new-numerals-starter.rkt DONE"
+}
+else{
+    Write-host "new-numerals-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-solution.rkt -NewName decreasing-image-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-solution___BAK.rkt
+    Write-host "decreasing-image-solution.rkt DONE"
+}
+else{
+    Write-host "decreasing-image-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-starter.rkt -NewName decreasing-image-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\decreasing-image-starter___BAK.rkt
+    Write-host "decreasing-image-starter.rkt DONE"
+}
+else{
+    Write-host "decreasing-image-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-solution.rkt -NewName odd-from-n-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-solution___BAK.rkt
+    Write-host "odd-from-n-solution.rkt DONE"
+}
+else{
+    Write-host "odd-from-n-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-starter.rkt -NewName odd-from-n-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems\odd-from-n-starter___BAK.rkt
+    Write-host "odd-from-n-starter.rkt DONE"
+}
+else{
+    Write-host "odd-from-n-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-solution.rkt -NewName concentric-circles-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-solution___BAK.rkt
+    Write-host "concentric-circles-solution.rkt DONE"
+}
+else{
+    Write-host "concentric-circles-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-starter.rkt -NewName concentric-circles-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\concentric-circles-starter___BAK.rkt
+    Write-host "concentric-circles-starter.rkt DONE"
+}
+else{
+    Write-host "concentric-circles-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-solution.rkt -NewName sum-to-n-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-solution___BAK.rkt
+    Write-host "sum-to-n-solution.rkt DONE"
+}
+else{
+    Write-host "sum-to-n-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-starter.rkt -NewName sum-to-n-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\sum-to-n-starter___BAK.rkt
+    Write-host "sum-to-n-starter.rkt DONE"
+}
+else{
+    Write-host "sum-to-n-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-solution.rkt -NewName naturals-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-solution___BAK.rkt
+    Write-host "naturals-solution.rkt DONE"
+}
+else{
+    Write-host "naturals-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-starter.rkt -NewName naturals-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\naturals-starter___BAK.rkt
+    Write-host "naturals-starter.rkt DONE"
+}
+else{
+    Write-host "naturals-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-solution.rkt -NewName new-numerals-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-solution___BAK.rkt
+    Write-host "new-numerals-solution.rkt DONE"
+}
+else{
+    Write-host "new-numerals-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-starter.rkt -NewName new-numerals-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5a_Naturals\Practice_Problems___More\lecture\new-numerals-starter___BAK.rkt
+    Write-host "new-numerals-starter.rkt DONE"
+}
+else{
+    Write-host "new-numerals-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-starter.rkt -NewName arrange-images-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-starter___BAK.rkt
+    Write-host "arrange-images-starter.rkt DONE"
+}
+else{
+    Write-host "arrange-images-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v2.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v2.rkt -NewName arrange-images-v2___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v2___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v2.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v2___BAK.rkt
+    Write-host "arrange-images-v2.rkt DONE"
+}
+else{
+    Write-host "arrange-images-v2.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v3.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v3.rkt -NewName arrange-images-v3___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v3___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v3.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v3___BAK.rkt
+    Write-host "arrange-images-v3.rkt DONE"
+}
+else{
+    Write-host "arrange-images-v3.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v4.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v4.rkt -NewName arrange-images-v4___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v4___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v4.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v4___BAK.rkt
+    Write-host "arrange-images-v4.rkt DONE"
+}
+else{
+    Write-host "arrange-images-v4.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v5.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v5.rkt -NewName arrange-images-v5___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v5___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v5.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v5___BAK.rkt
+    Write-host "arrange-images-v5.rkt DONE"
+}
+else{
+    Write-host "arrange-images-v5.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v6.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v6.rkt -NewName arrange-images-v6___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v6___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v6.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\arrange-images-v6___BAK.rkt
+    Write-host "arrange-images-v6.rkt DONE"
+}
+else{
+    Write-host "arrange-images-v6.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz.rkt -NewName quiz___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz___BAK.rkt
+    Write-host "quiz.rkt DONE"
+}
+else{
+    Write-host "quiz.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz_solution\Naturals-and-Helpers-Design-Quiz-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz_solution\Naturals-and-Helpers-Design-Quiz-solution.rkt -NewName Naturals-and-Helpers-Design-Quiz-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz_solution\Naturals-and-Helpers-Design-Quiz-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz_solution\Naturals-and-Helpers-Design-Quiz-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Design_Quiz\quiz_solution\Naturals-and-Helpers-Design-Quiz-solution___BAK.rkt
+    Write-host "Naturals-and-Helpers-Design-Quiz-solution.rkt DONE"
+}
+else{
+    Write-host "Naturals-and-Helpers-Design-Quiz-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-solution.rkt -NewName making-rain-filtered-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-solution___BAK.rkt
+    Write-host "making-rain-filtered-solution.rkt DONE"
+}
+else{
+    Write-host "making-rain-filtered-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-starter.rkt -NewName making-rain-filtered-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\making-rain-filtered-starter___BAK.rkt
+    Write-host "making-rain-filtered-starter.rkt DONE"
+}
+else{
+    Write-host "making-rain-filtered-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-solution.rkt -NewName render-roster-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-solution___BAK.rkt
+    Write-host "render-roster-solution.rkt DONE"
+}
+else{
+    Write-host "render-roster-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-starter.rkt -NewName render-roster-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\5b_Helpers\Practice_Problems\render-roster-starter___BAK.rkt
+    Write-host "render-roster-starter.rkt DONE"
+}
+else{
+    Write-host "render-roster-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\bst-dd-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\bst-dd-starter.rkt -NewName bst-dd-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\bst-dd-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\bst-dd-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\bst-dd-starter___BAK.rkt
+    Write-host "bst-dd-starter.rkt DONE"
+}
+else{
+    Write-host "bst-dd-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-bst-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-bst-starter.rkt -NewName lookup-in-bst-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-bst-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-bst-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-bst-starter___BAK.rkt
+    Write-host "lookup-in-bst-starter.rkt DONE"
+}
+else{
+    Write-host "lookup-in-bst-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-list-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-list-starter.rkt -NewName lookup-in-list-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-list-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-list-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\lookup-in-list-starter___BAK.rkt
+    Write-host "lookup-in-list-starter.rkt DONE"
+}
+else{
+    Write-host "lookup-in-list-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\question_1-lookup-BST.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\question_1-lookup-BST.rkt -NewName question_1-lookup-BST___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\question_1-lookup-BST___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\question_1-lookup-BST.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\question_1-lookup-BST___BAK.rkt
+    Write-host "question_1-lookup-BST.rkt DONE"
+}
+else{
+    Write-host "question_1-lookup-BST.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\render-bst-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\render-bst-starter.rkt -NewName render-bst-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\render-bst-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\render-bst-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\render-bst-starter___BAK.rkt
+    Write-host "render-bst-starter.rkt DONE"
+}
+else{
+    Write-host "render-bst-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-solution.rkt -NewName insert-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-solution___BAK.rkt
+    Write-host "insert-solution.rkt DONE"
+}
+else{
+    Write-host "insert-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-starter.rkt -NewName insert-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\insert-starter___BAK.rkt
+    Write-host "insert-starter.rkt DONE"
+}
+else{
+    Write-host "insert-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-solution.rkt -NewName render-bst-w-lines-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-solution___BAK.rkt
+    Write-host "render-bst-w-lines-solution.rkt DONE"
+}
+else{
+    Write-host "render-bst-w-lines-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter.rkt -NewName render-bst-w-lines-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___BAK.rkt
+    Write-host "render-bst-w-lines-starter.rkt DONE"
+}
+else{
+    Write-host "render-bst-w-lines-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___Copy.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___Copy.rkt -NewName render-bst-w-lines-starter___Copy___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___Copy___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___Copy.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\render-bst-w-lines-starter___Copy___BAK.rkt
+    Write-host "render-bst-w-lines-starter___Copy.rkt DONE"
+}
+else{
+    Write-host "render-bst-w-lines-starter___Copy.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-solution.rkt -NewName sum-keys-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-solution___BAK.rkt
+    Write-host "sum-keys-solution.rkt DONE"
+}
+else{
+    Write-host "sum-keys-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-starter.rkt -NewName sum-keys-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems\sum-keys-starter___BAK.rkt
+    Write-host "sum-keys-starter.rkt DONE"
+}
+else{
+    Write-host "sum-keys-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-solution.rkt -NewName balance-factor-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-solution___BAK.rkt
+    Write-host "balance-factor-solution.rkt DONE"
+}
+else{
+    Write-host "balance-factor-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-starter.rkt -NewName balance-factor-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\balance-factor-starter___BAK.rkt
+    Write-host "balance-factor-starter.rkt DONE"
+}
+else{
+    Write-host "balance-factor-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-solution.rkt -NewName count-nodes-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-solution___BAK.rkt
+    Write-host "count-nodes-solution.rkt DONE"
+}
+else{
+    Write-host "count-nodes-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-starter.rkt -NewName count-nodes-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\count-nodes-starter___BAK.rkt
+    Write-host "count-nodes-starter.rkt DONE"
+}
+else{
+    Write-host "count-nodes-starter.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-solution.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-solution.rkt -NewName height-solution___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-solution___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-solution.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-solution___BAK.rkt
+    Write-host "height-solution.rkt DONE"
+}
+else{
+    Write-host "height-solution.rkt SKIPPED"
+}
+
+$string = cat D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-starter.rkt
+if ($string -contains $text){
+    Rename-Item -Path D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-starter.rkt -NewName height-starter___BAK.rkt
+    racket __convert-to-plaintext.rkt D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-starter___BAK.rkt > D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-starter.rkt
+    del D:\Documents\OSSU\2_Core_CS\1_HowToCodeSimple\6_Binary_Search_Trees\Practice_Problems___More\height-starter___BAK.rkt
+    Write-host "height-starter.rkt DONE"
+}
+else{
+    Write-host "height-starter.rkt SKIPPED"
+}
+
+Write-host "All Done"
+pause
