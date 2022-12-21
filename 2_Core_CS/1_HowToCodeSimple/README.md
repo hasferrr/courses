@@ -11,4 +11,4 @@ Question and Quiz Problems:
 
 Syllabus:
 
-![syllabus](syllabus.png)
+[syllabus_simple.png](syllabus_simple.png)
