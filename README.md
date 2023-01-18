@@ -22,7 +22,7 @@ My progress:
 
 Courses | Duration | Final Project
 :-- | :--: | :--:
-Programming tutorial in YouTube/Internet | - | [github.com/hasferrr](https://github.com/hasferrr)
+Programming tutorial in YouTube/Internet | - | -
 [CS50x - CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/) | 10.43 weeks | [Wallet - Track your Income & Expenses](https://github.com/hasferrr/wallet)
 
 ### Core CS
