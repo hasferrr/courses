@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-advanced-reader.ss" "lang")((modname ta-solver-starter-final) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
+#reader(lib "htdp-advanced-reader.ss" "lang")((modname ta-solver-final) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #t #t none #f () #f)))
 ;; ta-solver-starter.rkt
 ;; by HasFer
 
@@ -93,7 +93,7 @@
 (define (most-followers u0)
   ;; todo    is (listof User)  ; a worklist accumulator
   ;; visited is (listof String); context perserving accumulator; user's name already visited to fn-for-user
-  ;; louf    is (listof u-foll); list of user's name and their followers
+  ;; louf    is (listof u-foll); list of user and their followers
 
   (local [(define-struct u-foll (user followers))
           ;; U-foll is (make-u-foll User Natural)
