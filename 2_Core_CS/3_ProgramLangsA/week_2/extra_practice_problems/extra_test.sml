@@ -86,3 +86,24 @@ val test13w = lookup ([("a",1)],"") = NONE
 val test13e = lookup ([("a",1),("b",2)],"") = NONE
 val test13r = lookup ([("a",1),("b",2)],"b") = SOME 2
 ;
+
+val test22q = fullDivide (2, 40) = (3, 5)  (* because 2*2*2*5 = 40 *)
+val test22w = fullDivide (3, 10) = (0, 10) (* because 3 does not divide 10 *)
+val test22e = fullDivide (5, 50) = (2, 2)
+;
+
+val test23q = null(factorize(1))
+val test23w = factorize(2) = [(2,1)]
+val test23e = factorize(4) = [(2,2)]
+val test23r = factorize(20) = [(2,2), (5,1)]
+val test23t = factorize(36) = [(2,2), (3,2)]
+val test23y = factorize(84) = [(2,2), (3,1), (7,1)]
+;
+
+val test24q = multiply [] = 1
+val test24w = multiply [(2,1)] = 2
+val test24e = multiply [(2,2)] = 4
+val test24r = multiply [(2,2), (5,1)] = 20
+val test24t = multiply [(2,2), (3,2)] = 36
+val test24y = multiply [(2,2), (3,1), (7,1)] = 84
+;

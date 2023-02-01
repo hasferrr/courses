@@ -205,3 +205,79 @@ fun lookup (listof_string_int_pair_0 : (string * int) list, s2 : string) =
         in
             lookup listof_string_int_pair_0
         end
+
+
+(*  22
+    fullDivide : int * int -> int * int
+    that given two numbers (k, n) it attempts to evenly divide k into n as many times as possible,
+    and returns a pair (d, n2) where d is the number of times while n2 is the resulting n after all those divisions *)
+fun fullDivide (int_pair : int * int) =
+    let
+        fun divide (k : int, n : int, divisions : int) =
+            if n mod k <> 0
+            then (divisions, n)
+            else divide (k, n div k, divisions + 1)
+    in
+        divide (#1 int_pair, #2 int_pair, 0)
+    end
+
+
+(* produce power of pow of number*)
+fun power (number : int, pow : int) =
+    if pow = 0
+    then 1
+    else number * power (number, pow - 1)
+
+
+(*  23
+    factorize : int -> (int * int) list
+    produce list of factorize of given int and how many division *)
+fun factorize (n0 : int) =
+    let
+        fun next_prime (prime : int) =
+            let
+                fun next (prime : int, num : int) =
+                    if prime = num
+                    then prime
+                    else
+                        if prime mod num = 0
+                        then next (prime + 1, 2)
+                        else next (prime, num + 1)
+            in
+                next (prime + 1, 2)
+            end
+
+        fun calculate (n : int, prime : int, rsf : (int * int) list, multiply : int) =
+            let
+                val result = fullDivide(prime, n)
+            in
+                if multiply = n0
+                then rsf
+                else if #1 result = 0
+                then calculate (n, next_prime(prime), rsf, multiply)
+                else calculate (n, next_prime(prime), rsf @ [(prime, #1 result)], multiply * power(prime, #1 result))
+            end
+    in
+        calculate (n0, 2, [], 1)
+    end
+
+
+(*  24
+    multiply : (int * int) list -> int
+    computes back the number of factorized *)
+fun multiply (factor : (int * int) list) =
+    let
+        fun mult (factor : (int * int) list, rsf : int) =
+            if null factor
+            then rsf
+            else mult (tl factor, rsf * power(#1 (hd factor), #2 (hd factor)))
+    in
+        mult (factor, 1)
+    end
+
+
+(*  25
+    all_products : (int * int) list -> int list
+    creates a list all of possible products produced from using some or all of those prime factors no more than the number of times they are available *)
+fun all_products (factors: (int * int) list) =
+    []
