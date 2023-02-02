@@ -311,14 +311,16 @@ fun all_products (factors: (int * int) list) =
 
         fun products_many (listof_factors : ((int * int) list) list) =
             let
-                fun another_multiply_check (factors : (int * int) list, rsf : int) =
+                (* Factors Int Int -> (Listof Int) *)
+                fun another_multiply_check (factors : (int * int) list, rsf : int list, count : int) =
                     if null factors
-                    then 0
+                    then rsf
                     else
                         if #2 (hd factors) <> 1
-                        then rsf
-                        else another_multiply_check (tl factors, rsf + 1)
+                        then another_multiply_check (tl factors, count :: rsf, count + 1)
+                        else another_multiply_check (tl factors, rsf, count + 1)
 
+                (* Factors Int Int Factors -> Factors *)
                 fun add_another_multiply (factors : (int * int) list, index : int, enum : int, rsf : (int * int) list) =
                     if null factors
                     then []
@@ -327,14 +329,19 @@ fun all_products (factors: (int * int) list) =
                         then rsf @ [(#1 (hd factors), #2 (hd factors) - 1)] @ tl factors
                         else add_another_multiply (tl factors, index, enum + 1, hd factors :: rsf)
 
-                val check_result = another_multiply_check (hd listof_factors, 1)
+                (* Factors (Listof Int) -> (Listof Factors) *)
+                fun add_another_multiply_many (factors : (int * int) list, listof_index : int list) =
+                    if null listof_index
+                    then []
+                    else
+                        add_another_multiply (factors, hd listof_index, 1, []) ::
+                        add_another_multiply_many (factors, tl listof_index)
+
+                val check_result = another_multiply_check (hd listof_factors, [], 1)
             in
-                if check_result <> 0
-                then products_many (add_another_multiply (hd listof_factors,
-                                                          check_result,
-                                                          1,
-                                                          [])
-                                    :: listof_factors)
+                if not (null (check_result))
+                then products_many (add_another_multiply_many (hd listof_factors, check_result)
+                                    @ listof_factors)
 
                 else listof_factors
             end
