@@ -280,4 +280,74 @@ fun multiply (factor : (int * int) list) =
     all_products : (int * int) list -> int list
     creates a list all of possible products produced from using some or all of those prime factors no more than the number of times they are available *)
 fun all_products (factors: (int * int) list) =
-    []
+    let
+
+        fun calculate (factors0: (int * int) list) =
+            let
+                fun calculate_rest (factors: (int * int) list, mult : int) =
+                    if null factors
+                    then []
+                    else mult * power (#1 (hd factors), #2 (hd factors)) :: calculate_rest (tl factors, mult)
+
+                fun calculate (factors: (int * int) list, mult : int, rsf : int list) =
+                    if null factors
+                    then rsf
+                    else
+                        calculate (tl factors,
+                                   mult * power (#1 (hd factors), #2 (hd factors)),
+                                   rsf @ calculate_rest(factors, mult))
+
+                fun calculate_factor_by_factor (factors: (int * int) list) =
+                    if null factors
+                    then []
+                    else
+                        calculate (factors, 1, []) @
+                        calculate_factor_by_factor (tl factors)
+            in
+                calculate_factor_by_factor (factors0)
+            end
+
+        fun products_many (listof_factors : ((int * int) list) list) =
+            let
+                fun another_multiply_check (factors : (int * int) list, rsf : int) =
+                    if null factors
+                    then 0
+                    else
+                        if #2 (hd factors) <> 1
+                        then rsf
+                        else another_multiply_check (tl factors, rsf + 1)
+
+                fun add_another_multiply (factors : (int * int) list, index : int, enum : int, rsf : (int * int) list) =
+                    if null factors
+                    then []
+                    else
+                        if index = enum
+                        then rsf @ [(#1 (hd factors), #2 (hd factors) - 1)] @ tl factors
+                        else add_another_multiply (tl factors, index, enum + 1, hd factors :: rsf)
+
+                val check_result = another_multiply_check (hd listof_factors, 1)
+            in
+                if check_result <> 0
+                then products_many (add_another_multiply (hd listof_factors,
+                                                          check_result,
+                                                          1,
+                                                          [])
+                                    :: listof_factors)
+
+                else listof_factors
+            end
+
+        fun products_one_by_one (lof : ((int * int) list) list) =
+            if null lof
+            then []
+            else
+                calculate (hd lof) @
+                products_one_by_one (tl lof)
+
+    in
+        (* TODO:
+        - REMOVE DUPLICATE
+        - SORT
+        *)
+        1 :: products_one_by_one (products_many [factors])
+    end

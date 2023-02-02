@@ -107,3 +107,10 @@ val test24r = multiply [(2,2), (5,1)] = 20
 val test24t = multiply [(2,2), (3,2)] = 36
 val test24y = multiply [(2,2), (3,1), (7,1)] = 84
 ;
+
+val test251 = all_products [] = [1]
+val test252 = all_products [(2,1)] = [1,2]
+val test25q = all_products [(2,2), (5,1)] = [1,2,4,5,10,20]
+val test25w = all_products [(2,2), (3,2)] = [1,2,3,4,6,9,12,18,36]
+val test25e = all_products [(2,2), (3,1), (7,1)] = [1,2,3,4,6,7,12,14,21,28,42,84]
+;
