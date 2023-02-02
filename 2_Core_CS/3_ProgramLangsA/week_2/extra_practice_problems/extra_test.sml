@@ -1,4 +1,5 @@
 use "extra.sml";
+use "merge_sort.sml";
 
 val test1a = alternate [] = 0
 val test1b = alternate [1] = 1
@@ -106,6 +107,13 @@ val test24e = multiply [(2,2)] = 4
 val test24r = multiply [(2,2), (5,1)] = 20
 val test24t = multiply [(2,2), (3,2)] = 36
 val test24y = multiply [(2,2), (3,1), (7,1)] = 84
+;
+
+val test_sort_1 = null(merge_sort [])
+val test_sort_2 = merge_sort [2] = [2]
+val test_sort_3 = merge_sort [2,3] = [2,3]
+val test_sort_4 = merge_sort [6,3] = [3,6]
+val test_sort_5 = merge_sort [6,5,3,1,8,7,2,4] = [1,2,3,4,5,6,7,8]
 ;
 
 val test251 = all_products [] = [1]

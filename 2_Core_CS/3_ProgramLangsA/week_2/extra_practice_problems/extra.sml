@@ -1,3 +1,5 @@
+use "merge_sort.sml";
+
 (* 1 *)
 (* alternate : int list -> int *)
 (* adds every element in int list with alternating sign (- then +) *)
@@ -344,10 +346,24 @@ fun all_products (factors: (int * int) list) =
                 calculate (hd lof) @
                 products_one_by_one (tl lof)
 
+        fun remove_duplicate (int_list : int list) =
+            let
+                fun in_the (n : int, int_list : int list) =
+                    if null int_list
+                    then false
+                    else
+                        hd int_list = n orelse in_the (n, tl int_list)
+
+                fun remove_dupl (int_list : int list, rsf : int list) =
+                    if null int_list
+                    then rsf
+                    else
+                        if in_the (hd int_list, rsf)
+                        then remove_dupl (tl int_list, rsf)
+                        else remove_dupl (tl int_list, rsf @ [hd int_list])
+            in
+                remove_dupl (int_list, [])
+            end
     in
-        (* TODO:
-        - REMOVE DUPLICATE
-        - SORT
-        *)
-        1 :: products_one_by_one (products_many [factors])
+        1 :: merge_sort (remove_duplicate (products_one_by_one (products_many [factors])))
     end
