@@ -26,3 +26,13 @@ fun sum_triple_3 (x,y,z) =
 val data = (3,4,5)
 val result_0 = sum_triple_0_args data
 val result_3 = sum_triple_3 data
+;
+
+fun sum_triple_records (triple : {first:int, middle:int, last:int}) =
+    let
+        val {first=a, middle=b, last=c} = triple
+    in
+        a + b + c
+    end
+
+val result_records = sum_triple_records {first=3, middle=4, last=5}
