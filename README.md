@@ -33,7 +33,7 @@ Programming tutorial in YouTube/Internet | - | -
 Courses | Duration | Final Project
 :-- | :--: | :--:
 [How to Code - Simple Data](https://www.edx.org/course/how-to-code-simple-data) | 7.14 weeks | [Space Invader](2_Core_CS/1_HowToCodeSimple/Final_Project)
-[How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data) | 10.29 weeks | [TA Solver](2_Core_CS\2_HowToCodeComplex\Final_Project)
+[How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data) | 10.29 weeks | [TA Solver](2_Core_CS/2_HowToCodeComplex/Final_Project)
 [Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) | | *(doing)*
 [Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) |
 [Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) |
