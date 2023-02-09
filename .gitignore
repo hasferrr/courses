@@ -2,3 +2,4 @@
 *.bak
 **/.ignore/*
 **/.gitignore
+**/__pycache__/*
