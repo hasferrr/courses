@@ -135,3 +135,19 @@ fun tree_fold f init tr =
     case tr of
           leaf => init
         | node {value=v, left=l, right=r} => f(v, f(tree_fold f init l, tree_fold f init r))
+
+(* using worklist accumulator and mutual recursion*)
+fun tree_fold f rsf tr =
+    let
+        fun fold_one rsf tr todo =
+            case tr of
+                  leaf => fold_many rsf todo
+                | node {value=v, left=l, right=r} => fold_many (f(v,rsf)) ([l,r] @ todo)
+
+        and fold_many rsf lotr =
+            case lotr of
+                  [] => rsf
+                | first::rest => fold_one rsf first rest
+    in
+        fold_one rsf tr []
+    end
