@@ -1,6 +1,6 @@
 <img src="https://img.icons8.com/color/480/null/code-folder.png" align="right" width="120px"/>
 
-# Computer Science
+# Courses
 
 ## Introduction
 
