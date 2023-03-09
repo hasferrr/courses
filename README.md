@@ -8,7 +8,7 @@ This is online computer science courses I took and am currently going through. I
 
 > *taking computer science courses while in college (because I'm  currently studying at a one university in Indonesia majoring in Accounting (not CS, not IT) is quite difficult because I have to divide my time between them, but I enjoy it.*
 
-## My Courses
+## Computer Science
 
 Some CS Courses I took and currently doing.
 
