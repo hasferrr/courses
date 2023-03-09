@@ -4,6 +4,8 @@
 
 Slides and Lecture Notes
 
+More: [https://courses.cs.washington.edu/courses/cse341/19sp/](https://courses.cs.washington.edu/courses/cse341/19sp/)
+
 ### Notes
 
 - [section1sum.pdf](week_2/PDF/section1sum.pdf)
