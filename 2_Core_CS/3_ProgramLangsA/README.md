@@ -2,7 +2,7 @@
 
 ## My Certificate
 
-[https://coursera.org/share/6cf23e7e8a2ae34b1abed8becf6f7b70](https://coursera.org/share/6cf23e7e8a2ae34b1abed8becf6f7b70)
+[https://www.coursera.org/account/accomplishments/certificate/Y9LAEKAMR8J5](https://www.coursera.org/account/accomplishments/certificate/Y9LAEKAMR8J5)
 
 ## Materials
 
