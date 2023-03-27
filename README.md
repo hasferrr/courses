@@ -35,8 +35,8 @@ Courses | Duration | Final Project
 [How to Code - Simple Data](https://www.edx.org/course/how-to-code-simple-data) | 7.14 weeks | [Space Invader](2_Core_CS/1_HowToCodeSimple/Final_Project)
 [How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data) | 10.29 weeks | [TA Solver](2_Core_CS/2_HowToCodeComplex/Final_Project)
 [Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) | 6.29 weeks | [Certificate](https://www.coursera.org/account/accomplishments/certificate/Y9LAEKAMR8J5)
-[Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) |
-[Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) |
+[Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) | 2 weeks | [Certificate](https://www.coursera.org/account/accomplishments/certificate/HQYP2T5BK5FA)
+[Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) | | *(doing)*
 [Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) |
 [Design Patterns](https://www.coursera.org/learn/design-patterns) |
 [Software Architecture](https://www.coursera.org/learn/software-architecture) |
