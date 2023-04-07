@@ -1,5 +1,6 @@
 *.lnk
 *.bak
+**/.ignore*
 **/.ignore/*
 **/.gitignore
 **/__pycache__/*
