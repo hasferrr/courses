@@ -73,7 +73,7 @@ puts Person.total_people    # Output: 2
 
 ```ruby
 class Triangle
-  PI = 3.14
+  PI = 3.14 # <--- class constant
 
   def initialize(base, height)
     @base = base
@@ -109,6 +109,18 @@ end
 
 MyClass.my_class_method   # Output: This is a class method
 ```
+
+## Public, Protected, Private
+
+- private method hanya bisa dipanggil di kelas di dalam class, tidak di luar class, dan tidak pula di-subclass-nya.
+- protected berarti private, tetapi bisa dipanggil di subclass-nya
+- public berarti protected, tetapi bisa dipanggil di luar class
+
+Yes, that's correct! To summarize:
+
+- private methods can only be called within the class where they are defined, and not from outside the class or its subclasses.
+- protected methods are similar to private methods, but can be called from within the class and its subclasses.
+- public methods can be called from anywhere, including outside the class.
 
 ## Block
 
@@ -206,7 +218,6 @@ class C
   def m1
     self.m2
   end
-
   def m2
     puts "Method m2 defined in class C"
   end
