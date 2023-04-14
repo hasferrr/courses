@@ -238,3 +238,82 @@ So when we run the code, the output is:
 ```txt
 Method m2 defined in class D
 ```
+
+## Interfaces in Dynamic Type Language?
+
+In the context of interfaces in Java, "disagree" means that two interfaces declare a method with the same name but different parameters or return types. This can happen if two interfaces define a method with the same name but different parameter lists, or if they define a method with the same name and parameter list but with different return types.
+
+For example, suppose there are two interfaces, `A` and `B`, and they both define a method called `foo`. However, `A` defines `foo` to take an integer argument and return a string, while `B` defines `foo` to take a string argument and return an integer. In this case, the two interfaces disagree on the type of the `foo` method, and it is not possible for a single class to implement both interfaces.
+
+The Java compiler will detect this kind of conflict and raise a compilation error.
+
+### Bottom line:
+
+In languages like Java and C#, the implementation of interfaces is a way to define a contract that a class must adhere to, which is used to provide a certain level of guarantee to the caller of a method that a particular set of methods with specific signatures will be available to call. This is enforced by the compiler at compile-time, ensuring that a class that implements an interface implements all the methods defined by that interface.
+
+However, in dynamically typed languages like Ruby, there is no need to define interfaces in order to provide this guarantee. Since the types of objects are only known at runtime, there is no compile-time type-checking to enforce the implementation of interfaces. Instead, it is up to the programmer to ensure that a particular object has the necessary methods before calling them, and if it does not, an error will occur at runtime.
+
+Therefore, in Ruby, the implementation of interfaces is not necessary since it is not used for enforcing type-checking at compile-time, and Ruby provides other means to achieve the same guarantees, such as duck-typing, which allows objects of different types to respond to the same message (method call) as long as they implement the same method signature.
+
+## More Interfaces
+
+Sure! Here's an example in Java:
+
+Suppose you have two classes `Rectangle` and `Circle`, both of which have a method `calculateArea()` that returns the area of the shape. However, `Rectangle` and `Circle` may have different implementations for `calculateArea()`.
+
+Now, suppose you have a method `printArea (Shape shape)` that takes an object of type `Shape` and prints the area of the shape. One way to implement this method is by using an
+interface `Shape` that both `Rectangle` and `Circle` implement:
+
+```java
+public interface Shape {
+    public double calculateArea();
+}
+
+public class Rectangle implements Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public double calculateArea() {
+        return width * height;
+    }
+}
+
+public class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class ShapePrinter {
+    public void printArea(Shape shape) {
+        System.out.println("The area of the shape is " + shape.calculateArea());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ShapePrinter printer = new ShapePrinter();
+        Rectangle rectangle = new Rectangle(5, 10);
+        Circle circle = new Circle(3);
+
+        printer.printArea(rectangle); // prints "The area of the shape is 50.0"
+        printer.printArea(circle);    // prints "The area of the shape is 28.274333882308138"
+    }
+}
+```
+
+In this example, `Shape` is an interface that specifies a method `calculateArea()`. Both `Rectangle` and `Circle` implement `Shape` and provide their own implementation of
+`calculateArea()`. The `ShapePrinter` class takes an object of type `Shape` and calls its `calculateArea()` method to print the area of the shape.
+
+Using an interface allows us to write a single method `printArea (Shape shape)` that can take any object that implements the `Shape` interface, regardless of whether it is a `Rectangle` or a `Circle`. This makes the type system more flexible, as any object that provides a `calculateArea()` method can be used in place of a `Shape`.
