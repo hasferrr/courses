@@ -59,10 +59,10 @@ fun two_points_to_line (x1,y1,x2,y2) =
 fun intersect (v1,v2) =
     case (v1,v2) of
 
-       (NoPoints, _) => NoPoints (* 5 cases *)
-     | (_, NoPoints) => NoPoints (* 4 additional cases *)
+        (NoPoints, _) => NoPoints (* 5 cases *)
+      | (_, NoPoints) => NoPoints (* 4 additional cases *)
 
-     |  (Point p1, Point p2) => if real_close_point p1 p2
+      | (Point p1, Point p2) => if real_close_point p1 p2
                                 then v1
                                 else NoPoints
 
@@ -106,71 +106,71 @@ fun intersect (v1,v2) =
       | (VerticalLine _, LineSegment seg) => intersect(v2,v1)
 
       | (LineSegment seg, _) =>
-    (* the hard case, actually 4 cases because v2 could be a point,
-       line, vertical line, or line segment *)
-    (* First compute the intersection of (1) the line containing the segment
-           and (2) v2. Then use that result to compute what we need. *)
-    (case intersect(two_points_to_line seg, v2) of
-        NoPoints => NoPoints
-      | Point(x0,y0) => (* see if the point is within the segment bounds *)
-        (* assumes v1 was properly preprocessed *)
-        let
-            fun inbetween(v,end1,end2) =
-                (end1 - epsilon <= v andalso v <= end2 + epsilon)
-                orelse (end2 - epsilon <= v andalso v <= end1 + epsilon)
-            val (x1,y1,x2,y2) = seg
-        in
-            if inbetween(x0,x1,x2) andalso inbetween(y0,y1,y2)
-            then Point(x0,y0)
-            else NoPoints
-        end
-      | Line _ => v1 (* so segment seg is on line v2 *)
-      | VerticalLine _ => v1 (* so segment seg is on vertical-line v2 *)
-      | LineSegment seg2 =>
-        (* the hard case in the hard case: seg and seg2 are on the same
-               line (or vertical line), but they could be (1) disjoint or
-               (2) overlapping or (3) one inside the other or (4) just touching.
-           And we treat vertical segments differently, so there are 4*2 cases.
-         *)
-        let
-            val (x1start,y1start,x1end,y1end) = seg
-            val (x2start,y2start,x2end,y2end) = seg2
-        in
-            if real_close(x1start,x1end)
-                then (* the segments are on a vertical line *)
-                     (* let segment a start at or below start of segment b *)
+        (* the hard case, actually 4 cases because v2 could be a point,
+           line, vertical line, or line segment *)
+        (* First compute the intersection of (1) the line containing the segment
+               and (2) v2. Then use that result to compute what we need. *)
+        (case intersect(two_points_to_line seg, v2) of
+                NoPoints => NoPoints
+              | Point(x0,y0) => (* see if the point is within the segment bounds *)
+                (* assumes v1 was properly preprocessed *)
                 let
-                    val ((aXstart,aYstart,aXend,aYend),
-                         (bXstart,bYstart,bXend,bYend)) = if y1start < y2start
-                                                          then (seg,seg2)
-                                                          else (seg2,seg)
+                    fun inbetween(v,end1,end2) =
+                        (end1 - epsilon <= v andalso v <= end2 + epsilon)
+                        orelse (end2 - epsilon <= v andalso v <= end1 + epsilon)
+                    val (x1,y1,x2,y2) = seg
                 in
-                    if real_close(aYend,bYstart)
-                    then Point (aXend,aYend) (* just touching *)
-                    else if aYend < bYstart
-                    then NoPoints (* disjoint *)
-                    else if aYend > bYend
-                    then LineSegment(bXstart,bYstart,bXend,bYend) (* b inside a *)
-                    else LineSegment(bXstart,bYstart,aXend,aYend) (* overlapping *)
+                    if inbetween(x0,x1,x2) andalso inbetween(y0,y1,y2)
+                    then Point(x0,y0)
+                    else NoPoints
                 end
-            else (* the segments are on a (non-vertical) line *)
-                (* let segment a start at or to the left of start of segment b *)
+              | Line _ => v1 (* so segment seg is on line v2 *)
+              | VerticalLine _ => v1 (* so segment seg is on vertical-line v2 *)
+              | LineSegment seg2 =>
+                (* the hard case in the hard case: seg and seg2 are on the same
+                       line (or vertical line), but they could be (1) disjoint or
+                       (2) overlapping or (3) one inside the other or (4) just touching.
+                   And we treat vertical segments differently, so there are 4*2 cases.
+                 *)
                 let
-                    val ((aXstart,aYstart,aXend,aYend),
-                         (bXstart,bYstart,bXend,bYend)) = if x1start < x2start
-                                                          then (seg,seg2)
-                                                          else (seg2,seg)
+                    val (x1start,y1start,x1end,y1end) = seg
+                    val (x2start,y2start,x2end,y2end) = seg2
                 in
-                    if real_close(aXend,bXstart)
-                    then Point (aXend,aYend) (* just touching *)
-                    else if aXend < bXstart
-                    then NoPoints (* disjoint *)
-                    else if aXend > bXend
-                    then LineSegment(bXstart,bYstart,bXend,bYend) (* b inside a *)
-                    else LineSegment(bXstart,bYstart,aXend,aYend) (* overlapping *)
-                end
-            end
-      | _ => raise Impossible "bad result from intersecting with a line")
+                    if real_close(x1start,x1end)
+                    then (* the segments are on a vertical line *)
+                         (* let segment a start at or below start of segment b *)
+                        let
+                            val ((aXstart,aYstart,aXend,aYend),
+                                 (bXstart,bYstart,bXend,bYend)) = if y1start < y2start
+                                                                  then (seg,seg2)
+                                                                  else (seg2,seg)
+                        in
+                            if real_close(aYend,bYstart)
+                            then Point (aXend,aYend) (* just touching *)
+                            else if aYend < bYstart
+                            then NoPoints (* disjoint *)
+                            else if aYend > bYend
+                            then LineSegment(bXstart,bYstart,bXend,bYend) (* b inside a *)
+                            else LineSegment(bXstart,bYstart,aXend,aYend) (* overlapping *)
+                        end
+                    else (* the segments are on a (non-vertical) line *)
+                        (* let segment a start at or to the left of start of segment b *)
+                        let
+                            val ((aXstart,aYstart,aXend,aYend),
+                                 (bXstart,bYstart,bXend,bYend)) = if x1start < x2start
+                                                                  then (seg,seg2)
+                                                                  else (seg2,seg)
+                        in
+                            if real_close(aXend,bXstart)
+                            then Point (aXend,aYend) (* just touching *)
+                            else if aXend < bXstart
+                            then NoPoints (* disjoint *)
+                            else if aXend > bXend
+                            then LineSegment(bXstart,bYstart,bXend,bYend) (* b inside a *)
+                            else LineSegment(bXstart,bYstart,aXend,aYend) (* overlapping *)
+                        end
+                    end
+              | _ => raise Impossible "bad result from intersecting with a line")
       | _ => raise Impossible "bad call to intersect: only for shape values"
 
 (* interpreter for our language:
