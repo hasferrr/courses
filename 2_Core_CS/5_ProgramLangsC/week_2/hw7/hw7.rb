@@ -151,7 +151,7 @@ class Point < GeometryValue
   end
 
   def intersectVerticalLine vline
-    return
+    self.intersect(vline)
   end
 
   def intersectLineSegment seg
@@ -200,7 +200,7 @@ class Line < GeometryValue
   end
 
   def intersectVerticalLine vline
-    return
+    self.intersect(vline)
   end
 
   def intersectLineSegment seg
@@ -238,7 +238,11 @@ class VerticalLine < GeometryValue
   end
 
   def intersectVerticalLine vline
-    return
+    if real_close(vline.x,@x)
+      return vline
+    else
+      return NoPoints.new
+    end
   end
 
   def intersectLineSegment seg
