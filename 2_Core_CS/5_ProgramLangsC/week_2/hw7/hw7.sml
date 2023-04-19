@@ -212,8 +212,8 @@ fun eval_prog (e,env) =
 
 fun preprocess_prog exp =
     case exp of
-        LineSegment (x1,y1,x2,y2) => if Real.compare(x1,x2) = General.EQUAL
-                                     then if Real.compare(y1,y2) = General.EQUAL
+        LineSegment (x1,y1,x2,y2) => if real_close(x1,x2)
+                                     then if real_close(y1,y2)
                                           then Point (x1,y1)
                                           else if y1 > y2
                                           then LineSegment (x2,y2,x1,y1)
