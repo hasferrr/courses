@@ -68,6 +68,17 @@ class GeometryValue
     line_result = intersect(two_points_to_line(seg.x1,seg.y1,seg.x2,seg.y2))
     line_result.intersectWithSegmentAsLineResult seg
   end
+
+  # preprocess_prog "wildcard" patterns for values
+  def preprocess_prog
+    self
+  end
+
+  # first 5 cases are all values, so no computation
+  def eval_prog env
+    self
+  end
+
 end
 
 class NoPoints < GeometryValue
@@ -118,6 +129,10 @@ class Point < GeometryValue
     @x = x
     @y = y
   end
+
+  def shift(dx,dy)
+    Point.new(@x + dx, @y + dy)
+  end
 end
 
 class Line < GeometryValue
@@ -128,6 +143,10 @@ class Line < GeometryValue
     @m = m
     @b = b
   end
+
+  def shift(dx,dy)
+    Line.new(@m, @b + dy - @m * dx)
+  end
 end
 
 class VerticalLine < GeometryValue
@@ -136,6 +155,10 @@ class VerticalLine < GeometryValue
   attr_reader :x
   def initialize x
     @x = x
+  end
+
+  def shift(dx,dy)
+    VerticalLine.new(@x + dx)
   end
 end
 
@@ -152,6 +175,27 @@ class LineSegment < GeometryValue
     @x2 = x2
     @y2 = y2
   end
+
+  def preprocess_prog
+    if real_close(@x1, @x2)
+      if real_close(@y1, @y2)
+        return Point.new(@x1,@y1)
+      elsif @y1 > @y2
+        return LineSegment.new(@x2,@y2,@x1,@y1)
+      else
+        return self
+      end
+    elsif @x1 > @x2
+      return LineSegment.new(@x2,@y2,@x1,@y1)
+    else
+      return self
+    end
+  end
+
+  def shift(dx,dy)
+    LineSegment.new(@x1, @y1, @x2 + dx, @y2 + dy)
+  end
+
 end
 
 # Note: there is no need for getter methods for the non-value classes
@@ -174,6 +218,15 @@ class Let < GeometryExpression
     @e1 = e1
     @e2 = e2
   end
+
+  def preprocess_prog
+    Let.new(@s, @e1.preprocess_prog, @e2.preprocess_prog)
+  end
+
+  def eval_prog env
+    @e2.eval_prog([s, @e1.eval_prog(env)] + env)
+  end
+
 end
 
 class Var < GeometryExpression
@@ -182,10 +235,15 @@ class Var < GeometryExpression
   def initialize s
     @s = s
   end
+
   def eval_prog env # remember: do not change this method
     pr = env.assoc @s
     raise "undefined variable" if pr.nil?
     pr[1]
+  end
+
+  def preprocess_prog
+    self
   end
 end
 
@@ -197,4 +255,13 @@ class Shift < GeometryExpression
     @dy = dy
     @e = e
   end
+
+  def preprocess_prog
+    Shift.new(@dx, @dy, @e.preprocess_prog)
+  end
+
+  def eval_prog env
+    @e.eval_prog(env).shift(@dx,@dy)
+  end
+
 end

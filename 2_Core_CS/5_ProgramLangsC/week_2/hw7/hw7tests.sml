@@ -18,8 +18,8 @@ let
    val Point(c,d) = Point(3.2, 4.1)
 in
    if real_equal(a,c) andalso real_equal(b,d)
-   then (print "===================> preprocess converts a LineSegment to a Point successfully\n")
-   else (print "===================> preprocess DOES NOT convert a LineSegment to a Point succesfully\n")
+   then (print "preprocess converts a LineSegment to a Point successfully\n")
+   else (print "=======================================> preprocess DOES NOT convert a LineSegment to a Point succesfully\n")
 end;
 
 
@@ -28,8 +28,8 @@ let
    val Point(c,d) = Point(3.2, 4.1)
 in
    if real_equal(a,c) andalso real_equal(b,d)
-   then (print "===================> preprocess converts a LineSegment to a Point successfully\n")
-   else (print "===================> preprocess DOES NOT convert a LineSegment to a Point succesfully\n")
+   then (print "preprocess converts a LineSegment to a Point successfully\n")
+   else (print "=======================================> preprocess DOES NOT convert a LineSegment to a Point succesfully\n")
 end;
 
 
@@ -38,8 +38,8 @@ let
    val LineSegment(e,f,g,h) = LineSegment(~3.2, ~4.1, 3.2, 4.1)
 in
    if real_equal(a,e) andalso real_equal(b,f) andalso real_equal(c,g) andalso real_equal(d,h)
-   then (print "===================> preprocess flips an improper LineSegment successfully\n")
-   else (print "===================> preprocess DOES NOT flip an improper LineSegment successfully\n")
+   then (print "preprocess flips an improper LineSegment successfully\n")
+   else (print "=======================================> preprocess DOES NOT flip an improper LineSegment successfully\n")
 end;
 
 
@@ -48,16 +48,8 @@ let
    val LineSegment(e,f,g,h) = LineSegment(2.0, ~5.0, 2.0, 9.9)
 in
    if real_equal(a,e) andalso real_equal(b,f) andalso real_equal(c,g) andalso real_equal(d,h)
-   then (print "===================> preprocess flips an improper LineSegment successfully\n")
-   else (print "===================> preprocess DOES NOT flip an improper LineSegment successfully\n")
-end;
-
-
-let
-   val Intersect(a,b) = preprocess_prog (Intersect (Point(3.2, 4.1), LineSegment(2.0, 9.9, 2.0, ~5.0)))
-   val Intersect(c,d) = Intersect (Point(3.2, 4.1), LineSegment(2.0, ~5.0, 2.0, 9.9))
-in
-   Intersect(c,d)
+   then (print "preprocess flips an improper LineSegment successfully\n")
+   else (print "=======================================> preprocess DOES NOT flip an improper LineSegment successfully\n")
 end;
 
 
@@ -71,7 +63,7 @@ let
 in
    if real_equal(a,c) andalso real_equal(b,d)
    then (print "eval_prog with empty environment worked\n")
-   else (print "eval_prog with empty environment IS NOT working properly\n")
+   else (print "=======================================> eval_prog with empty environment IS NOT working properly\n")
 end;
 
 
@@ -85,7 +77,7 @@ let
 in
    if real_equal(a,c) andalso real_equal(b,d)
    then (print "eval_prog with 'a' in environment is working properly\n")
-   else (print "eval_prog with 'a' in environment is not working properly\n")
+   else (print "=======================================> eval_prog with 'a' in environment IS NOT working properly\n")
 end;
 
 
@@ -99,5 +91,19 @@ let
 in
    if real_equal(a,c) andalso real_equal(b,d)
    then (print "eval_prog with shadowing 'a' in environment is working properly\n")
-   else (print "eval_prog with shadowing 'a' in environment is not working properly\n")
+   else (print "=======================================> eval_prog with shadowing 'a' in environment IS NOT working properly\n")
+end;
+
+
+
+
+
+print("+++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+
+(* OTHER TESTTTTTTTS *)
+let
+   val Intersect(a,b) = preprocess_prog (Intersect (Point(3.2, 4.1), LineSegment(2.0, 9.9, 2.0, ~5.0)))
+   val Intersect(c,d) = Intersect (Point(3.2, 4.1), LineSegment(2.0, ~5.0, 2.0, 9.9))
+in
+   Intersect(a,b)
 end;

@@ -205,7 +205,7 @@ fun eval_prog (e,env) =
                   | Line (m,b)     => Line (m, b + dy - m * dx)
                   | VerticalLine x => VerticalLine (x + dx)
                   | LineSegment (x1,y1,x2,y2) => LineSegment (x1, y1, x2+dx, y2+dy)
-                  | _ => Shift(dx, dy, eval_prog (e1, env))
+                  | _ => e1
             end
 
 
