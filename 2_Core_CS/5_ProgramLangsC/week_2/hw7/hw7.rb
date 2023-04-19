@@ -137,6 +137,23 @@ class Point < GeometryValue
   def intersect(other)
     other.intersectPoint(self)
   end
+
+  def intersectPoint p
+    return
+  end
+
+  def intersectLine line
+    return
+  end
+
+  def intersectVerticalLine vline
+    return
+  end
+
+  def intersectLineSegment seg
+    return
+  end
+
 end
 
 class Line < GeometryValue
@@ -155,6 +172,23 @@ class Line < GeometryValue
   def intersect(other)
     other.intersectLine(self)
   end
+
+  def intersectPoint p
+    return
+  end
+
+  def intersectLine line
+    return
+  end
+
+  def intersectVerticalLine vline
+    return
+  end
+
+  def intersectLineSegment seg
+    return
+  end
+
 end
 
 class VerticalLine < GeometryValue
@@ -172,6 +206,23 @@ class VerticalLine < GeometryValue
   def intersect(other)
     other.intersectVerticalLine(self)
   end
+
+  def intersectPoint p
+    return
+  end
+
+  def intersectLine line
+    return
+  end
+
+  def intersectVerticalLine vline
+    return
+  end
+
+  def intersectLineSegment seg
+    return
+  end
+
 end
 
 class LineSegment < GeometryValue
@@ -211,6 +262,23 @@ class LineSegment < GeometryValue
   def intersect(other)
     other.intersectLineSegment(self)
   end
+
+  def intersectPoint p
+    return
+  end
+
+  def intersectLine line
+    return
+  end
+
+  def intersectVerticalLine vline
+    return
+  end
+
+  def intersectLineSegment seg
+    return
+  end
+
 end
 
 # Note: there is no need for getter methods for the non-value classes
