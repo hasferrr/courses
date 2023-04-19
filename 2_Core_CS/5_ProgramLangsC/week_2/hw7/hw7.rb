@@ -139,7 +139,11 @@ class Point < GeometryValue
   end
 
   def intersectPoint p
-    return
+    if real_close_point(p.x, p.y, @x, @y)
+      return p
+    else
+      return NoPoints.new
+    end
   end
 
   def intersectLine line
@@ -174,7 +178,11 @@ class Line < GeometryValue
   end
 
   def intersectPoint p
-    return
+    if real_close(p.y, @m * p.x + @b)
+      return p
+    else
+      return NoPoints.new
+    end
   end
 
   def intersectLine line
@@ -208,7 +216,11 @@ class VerticalLine < GeometryValue
   end
 
   def intersectPoint p
-    return
+    if real_close(p.x, @x)
+      return p
+    else
+      return NoPoints.new
+    end
   end
 
   def intersectLine line
