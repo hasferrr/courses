@@ -133,6 +133,10 @@ class Point < GeometryValue
   def shift(dx,dy)
     Point.new(@x + dx, @y + dy)
   end
+
+  def intersect(other)
+    other.intersectPoint(self)
+  end
 end
 
 class Line < GeometryValue
@@ -147,6 +151,10 @@ class Line < GeometryValue
   def shift(dx,dy)
     Line.new(@m, @b + dy - @m * dx)
   end
+
+  def intersect(other)
+    other.intersectLine(self)
+  end
 end
 
 class VerticalLine < GeometryValue
@@ -159,6 +167,10 @@ class VerticalLine < GeometryValue
 
   def shift(dx,dy)
     VerticalLine.new(@x + dx)
+  end
+
+  def intersect(other)
+    other.intersectVerticalLine(self)
   end
 end
 
@@ -196,6 +208,9 @@ class LineSegment < GeometryValue
     LineSegment.new(@x1, @y1, @x2 + dx, @y2 + dy)
   end
 
+  def intersect(other)
+    other.intersectLineSegment(self)
+  end
 end
 
 # Note: there is no need for getter methods for the non-value classes
