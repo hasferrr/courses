@@ -147,7 +147,7 @@ class Point < GeometryValue
   end
 
   def intersectLine line
-    line.intersect(self)
+    self.intersect(line)
   end
 
   def intersectVerticalLine vline
