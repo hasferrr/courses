@@ -154,6 +154,10 @@ class Point < GeometryValue
     self.intersect(vline)
   end
 
+  def intersectWithSegmentAsLineResult seg
+    return # TODO !!!
+  end
+
 end
 
 class Line < GeometryValue
@@ -199,6 +203,10 @@ class Line < GeometryValue
     self.intersect(vline)
   end
 
+  def intersectWithSegmentAsLineResult seg
+    return # TODO !!!
+  end
+
 end
 
 class VerticalLine < GeometryValue
@@ -235,6 +243,10 @@ class VerticalLine < GeometryValue
     else
       return NoPoints.new
     end
+  end
+
+  def intersectWithSegmentAsLineResult seg
+    return # TODO !!!
   end
 
 end
@@ -287,6 +299,10 @@ class LineSegment < GeometryValue
 
   def intersectVerticalLine vline
     self.intersect(vline)
+  end
+
+  def intersectWithSegmentAsLineResult seg
+    return # TODO !!!
   end
 
 end
