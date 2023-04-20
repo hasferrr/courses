@@ -65,7 +65,7 @@ class GeometryValue
   # first intersecting with the line containing the segment and then
   # calling the result's intersectWithSegmentAsLineResult with the segment
   def intersectLineSegment seg
-    line_result = intersect(two_points_to_line(seg.x1,seg.y1,seg.x2,seg.y2))
+    line_result = intersect(two_points_to_line(seg.x1, seg.y1, seg.x2, seg.y2))
     line_result.intersectWithSegmentAsLineResult seg
   end
 
@@ -154,10 +154,6 @@ class Point < GeometryValue
     self.intersect(vline)
   end
 
-  def intersectLineSegment seg
-    return
-  end
-
 end
 
 class Line < GeometryValue
@@ -203,10 +199,6 @@ class Line < GeometryValue
     self.intersect(vline)
   end
 
-  def intersectLineSegment seg
-    return
-  end
-
 end
 
 class VerticalLine < GeometryValue
@@ -243,10 +235,6 @@ class VerticalLine < GeometryValue
     else
       return NoPoints.new
     end
-  end
-
-  def intersectLineSegment seg
-    return
   end
 
 end
@@ -290,19 +278,15 @@ class LineSegment < GeometryValue
   end
 
   def intersectPoint p
-    return
+    self.intersect(p)
   end
 
   def intersectLine line
-    return
+    self.intersect(line)
   end
 
   def intersectVerticalLine vline
-    return
-  end
-
-  def intersectLineSegment seg
-    return
+    self.intersect(vline)
   end
 
 end
