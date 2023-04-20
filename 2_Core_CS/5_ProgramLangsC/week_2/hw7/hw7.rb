@@ -289,7 +289,7 @@ class LineSegment < GeometryValue
   end
 
   def shift(dx,dy)
-    LineSegment.new(@x1, @y1, @x2 + dx, @y2 + dy)
+    LineSegment.new(@x1 + dx, @y1 + dy, @x2 + dx, @y2 + dy)
   end
 
   def intersect(other)
