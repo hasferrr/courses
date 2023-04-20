@@ -309,7 +309,50 @@ class LineSegment < GeometryValue
   end
   # seg = seg ; seg2 = self
   def intersectWithSegmentAsLineResult seg
-    return # TODO !!!
+    if real_close(seg.x1, seg.x2)
+
+      # the segments are on a vertical line
+      # let segment a start at or below start of segment b
+
+      if seg.y1 < @y1
+        seg_array = [seg, self]
+      else
+        seg_array = [self, seg]
+      end
+
+      if real_close(seg_array[0].y2, seg_array[1].y1)
+        Point.new(seg_array[0].x2, seg_array[0].y2)
+      elsif seg_array[0].y2 < seg_array[1].y1
+        NoPoints.new
+      elsif seg_array[0].y2 > seg_array[1].y2
+        LineSegment.new(seg_array[1].x1, seg_array[1].y1, seg_array[1].x2, seg_array[1].y2)
+      else
+        LineSegment.new(seg_array[1].x1, seg_array[1].y1, seg_array[0].x2, seg_array[0].y2)
+      end
+
+
+    else
+
+      # the segments are on a (non-vertical) line
+      # let segment a start at or to the left of start of segment b
+
+      if seg.x1 < @x1
+        seg_array = [seg, self]
+      else
+        seg_array = [self, seg]
+      end
+
+      if real_close(seg_array[0].x2, seg_array[1].x1)
+        Point.new(seg_array[0].x2, seg_array[0].y1)
+      elsif seg_array[0].x2 < seg_array[1].x1
+        NoPoints.new
+      elsif seg_array[0].x2 > seg_array[1].x2
+        LineSegment.new(seg_array[1].x1, seg_array[1].y1, seg_array[1].x2, seg_array[1].y2)
+      else
+        LineSegment.new(seg_array[1].x1, seg_array[1].y1, seg_array[0].x2, seg_array[0].y1)
+      end
+
+    end
   end
 
 end
