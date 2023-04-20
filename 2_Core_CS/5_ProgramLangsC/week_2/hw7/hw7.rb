@@ -291,7 +291,7 @@ class LineSegment < GeometryValue
   def shift(dx,dy)
     LineSegment.new(@x1 + dx, @y1 + dy, @x2 + dx, @y2 + dy)
   end
-
+  # !!! LineSegment intersect not working properly (1)
   def intersect(other)
     other.intersectLineSegment(self)
   end
@@ -370,7 +370,7 @@ class Intersect < GeometryExpression
   def preprocess_prog
     Intersect.new(@e1.preprocess_prog, @e2.preprocess_prog)
   end
-
+  # !!! Intersect eval_prog should return the intersect between e1 and e2
   def eval_prog env
     @e1.eval_prog(env).intersect(@e2.eval_prog(env))
   end
@@ -403,7 +403,7 @@ class Var < GeometryExpression
   def initialize s
     @s = s
   end
-
+  # !!! undefined variable (RuntimeError)
   def eval_prog env # remember: do not change this method
     pr = env.assoc @s
     raise "undefined variable" if pr.nil?

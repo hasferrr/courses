@@ -133,11 +133,11 @@ end
 
 d4 = d.intersect(LineSegment.new(-THREE,-FOUR,ONE,TWO))
 if not (((d4.is_a? LineSegment)) and d4.x1 == -THREE and d4.y1 == -FOUR and d4.x2 == ONE and d4.y2 == TWO)
-    puts "LineSegment intersect not working properly"
+    puts "LineSegment intersect not working properly (1)"
 end
 d5 = d.intersect(LineSegment.new(TWO,THREE,FOUR,FIVE))
 if not ((d5.is_a? NoPoints))
-    puts "LineSegment intersect not working properly"
+    puts "LineSegment intersect not working properly (2)"
 end
 
 
