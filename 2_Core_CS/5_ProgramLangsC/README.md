@@ -12,9 +12,9 @@ Slides and Lecture Notes
 
 ### Slides
 
-- [week1_combined_slides.pdf](week_1/slides/week1_combined_slides.pdf)
-- [week2_combined_slides.pdf](week_2/slides/week2_combined_slides.pdf)
-- [week3_combined_slides.pdf](week_3/slides/week3_combined_slides.pdf)
+- [week1_combined_slides_PLC.pdf](week_1/slides/week1_combined_slides_PLC.pdf)
+- [week2_combined_slides_PLC.pdf](week_2/slides/week2_combined_slides_PLC.pdf)
+- [week3_combined_slides_PLC.pdf](week_3/slides/week3_combined_slides_PLC.pdf)
 
 ## My Notes
 
