@@ -85,3 +85,9 @@ A **complete** type system is one that ensures that every program that passes ty
 In other words, a **sound** type system prevents type errors, while a **complete** type system prevents runtime errors. A type system that is both sound and complete is ideal, as it provides the highest level of assurance that a program will behave correctly.
 
 In summary, a **sound** type system guarantees that programs will not crash due to type errors at runtime, while a **complete** type system guarantees that all valid programs will be accepted by the typechecker.
+
+X we wish to prevent:
+
+A type system is considered "sound" if it **never accepts/prevent** a program that, when run with some input, **produces behavior or errors** described as "X". This means that no errors are caused by a program that is accepted by the type system (prevent what they claim to prevent).
+
+On the other hand, a type system is considered "complete" if it **never rejects/let** a program that will **not produce behavior or errors** described as "X", regardless of the input used.
