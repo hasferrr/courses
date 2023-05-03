@@ -130,11 +130,17 @@ MyClass.my_class_method   # Output: This is a class method
 
 ### Public, Protected, Private
 
-- private method hanya bisa dipanggil di kelas di dalam class, tidak di luar class, dan tidak pula di-subclass-nya.
+- private method hanya bisa dipanggil di dalam class, tidak di luar class, dan tidak pula di-subclass-nya.
 - protected berarti private, tetapi bisa dipanggil di subclass-nya
 - public berarti protected, tetapi bisa dipanggil di luar class
 
 Yes, that's correct! To summarize:
+
+||Class|Subclass|Outside|
+|-|:-:|:-:|:-:|
+|**Private**|v|
+|**Protected**|v|v|
+|**Public**|v|v|v|
 
 - private methods can only be called within the class where they are defined, and not from outside the class or its subclasses.
 - protected methods are similar to private methods, but can be called from within the class and its subclasses.
@@ -222,7 +228,7 @@ c = a.map {|x| lambda {|y| x >= y} }
 
 #### what does `lambda` do?
 
-In the given code, `lambda` creates an anonymous function for each element `x` of the array `a`, which takes an argument `y` and returns a boolean indicating whether `x` is greater than or equal to `y`.
+In the given code, **`lambda` creates an anonymous function for each element `x` of the array `a`**, which takes an argument `y` and returns a boolean indicating whether `x` is greater than or equal to `y`.
 
 Here's a breakdown of the code:
 
