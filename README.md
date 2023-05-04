@@ -12,10 +12,7 @@ This is online computer science courses I took and am currently going through. I
 
 Some CS Courses I took and currently doing.
 
-My progress:
-
-- [OSSU CS Timeline - Google Spreadsheet](https://docs.google.com/spreadsheets/d/1w45IvRvgfUtbaNuHanKa2BeP8pjcueBCVTOZKnvo4QU/edit?usp=sharing)
-- [OSSU - Computer Science | Trello](https://trello.com/b/AJEUSOVK)
+My progress: [OSSU CS Timeline - Google Spreadsheet](https://docs.google.com/spreadsheets/d/1w45IvRvgfUtbaNuHanKa2BeP8pjcueBCVTOZKnvo4QU/edit?usp=sharing)
 
 ### Intro CS
 
@@ -34,9 +31,9 @@ Courses | Duration | Final Project
 :-- | :--: | :--:
 [How to Code - Simple Data](https://www.edx.org/course/how-to-code-simple-data) | 7.14 weeks | [Space Invader](2_Core_CS/1_HowToCodeSimple/Final_Project)
 [How to Code - Complex Data](https://www.edx.org/course/how-to-code-complex-data) | 10.29 weeks | [TA Solver](2_Core_CS/2_HowToCodeComplex/Final_Project)
-[Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) | 6.29 weeks | [Certificate](https://www.coursera.org/account/accomplishments/certificate/Y9LAEKAMR8J5)
-[Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) | 2 weeks | [Certificate](https://www.coursera.org/account/accomplishments/certificate/HQYP2T5BK5FA)
-[Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) | | *(doing)*
-[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) |
+[Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) | 6.29 weeks | [Certificate](https://www.coursera.org/account/accomplishments/verify/Y9LAEKAMR8J5)
+[Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) | 2 weeks | [Certificate](https://www.coursera.org/account/accomplishments/verify/HQYP2T5BK5FA)
+[Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) | 6 weeks | [Certificate](https://www.coursera.org/account/accomplishments/verify/BCBPTHQDZVNA)
+[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) | | *(doing)*
 [Design Patterns](https://www.coursera.org/learn/design-patterns) |
 [Software Architecture](https://www.coursera.org/learn/software-architecture) |
