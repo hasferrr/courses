@@ -34,6 +34,6 @@ Courses | Duration | Final Project
 [Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) | 6.29 weeks | [Certificate](https://www.coursera.org/account/accomplishments/verify/Y9LAEKAMR8J5)
 [Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) | 2 weeks | [Certificate](https://www.coursera.org/account/accomplishments/verify/HQYP2T5BK5FA)
 [Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) | 6 weeks | [Certificate](https://www.coursera.org/account/accomplishments/verify/BCBPTHQDZVNA)
-[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) | | *(doing)*
-[Design Patterns](https://www.coursera.org/learn/design-patterns) |
+[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) | 3 weeks | [6_ObjectOrientedDesign](2_Core_CS/6_ObjectOrientedDesign)
+[Design Patterns](https://www.coursera.org/learn/design-patterns) | | *(doing)*
 [Software Architecture](https://www.coursera.org/learn/software-architecture) |
