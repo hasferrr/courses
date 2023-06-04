@@ -346,3 +346,134 @@ public class Main {
 }
 
 ```
+
+### Proxy pattern
+
+```java
+public interface IOrder {
+    public void fulfillOrder(Order);
+}
+
+
+public class Warehouse implements IOrder {
+    private Hashtable<String, Integer> stock;
+    private String address;
+
+    /* Constructors and other attributes would go here */
+    ...
+
+    public void fulfillOrder(Order order) {
+        for (Item item : order.itemList)
+            this.stock.replace(item.sku, stock.get(item)-1);
+
+        /* Process the order for shipment and delivery */
+        ...
+    }
+
+    public int currentInventory(Item item) {
+        if (stock.containsKey(item.sku))
+            return stock.get(item.sku).intValue();
+        return 0;
+    }
+}
+
+
+
+public class OrderFulfillment implements IOrder {
+    private List<Warehouse> warehouses;
+
+    /* Constructors and other attributes would go here */
+    public void fulfillOrder(Order order) {
+        /*
+        - For each item in a customer order, check each
+          warehouse to see if it is in stock.
+        - If it is then create a new Order for that warehouse.
+          Else check the next warehouse.
+        - Send all the Orders to the warehouse(s) after you finish
+          iterating over all the items in the original Order.
+        */
+        for (Item item: order.itemList) {
+            for (Warehouse warehouse: warehouses) {
+                ...
+            }
+        }
+        return;
+    }
+}
+```
+
+### Decorator pattern
+
+```java
+public interface WebPage {
+    public void display();
+}
+
+
+
+public class BasicWebPage implements WebPage {
+    public String html = ...;
+    public String styleSheet = ...;
+    public String script = ...;
+    public void display() {
+    /* Renders the HTML to the stylesheet, and run any embedded
+    scripts */
+}
+
+
+
+public abstract class WebPageDecorator implements WebPage {
+    protected WebPage page;
+
+    public WebPageDecorator(WebPage webpage) {
+        this.page = webpage;
+    }
+
+    public void display() {
+        this.page.display();
+    }
+}
+
+
+
+public class AuthorizedWebPage extends WebPageDecorator {
+
+    public AuthorizedWebPage(WebPage decoratedPage) {
+        super(decoratedPage);
+    }
+    public void authorizedUser() {
+        System.out.println("Authorizing user");
+    }
+    public display() {
+        super.display();
+        this.authorizedUser();
+    }
+}
+
+public class AuthenticatedWebPage extends WebPageDecorator {
+
+    public AuthenticatedWebPage(WebPage decoratedPage) {
+        super(decoratedPage);
+    }
+    public void authenticateUser() {
+        System.out.println("Authenticating user");
+    }
+    public display() {
+        super.display();
+        this.authenticateUser();
+    }
+}
+```
+
+main program
+
+```java
+public class Program {
+    public static void main(String args[]) {
+        WebPage myPage = new BasicWebPage();
+        myPage = new AuthorizedWebPage(myPage);
+        myPage = new AuthenticatedWebPage(myPage);
+        myPage.display();
+    }
+}
+```
