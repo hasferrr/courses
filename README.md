@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is online computer science courses I took and am currently going through. I mostly followed the [OSSU](https://github.com/ossu/computer-science) curriculum. The files in this repository mostly contain my solutions to problem sets, quizzes, and the final project for each course that OSSU provides.
+This is online computer science courses I took and am currently going through. I mostly followed the [OSSU](https://github.com/ossu/computer-science) curriculum. The files in this repository mostly contain my solutions to material, lecture notes, problem sets, quizzes, and the final project for each course.
 
 > *taking computer science courses while in college (because I'm  currently studying at a one university in Indonesia majoring in Accounting (not CS, not IT) is quite difficult because I have to divide my time between them, but I enjoy it.*
 
@@ -21,7 +21,7 @@ My progress: [OSSU CS Timeline - Google Spreadsheet](https://docs.google.com/spr
 Courses | Topics | Final Project
 :-- | :--: | :--:
 Programming tutorial in YouTube/Internet | `variable` `loop` `datatype` `function` `programming` | -
-[CS50x - CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/) | Wide range of topics in Computer Science: `binary` `C` `algorithms` `data structures` `pointers` `memory` `python` `SQL` `Web` | [Wallet - Track your Income & Expenses](https://github.com/hasferrr/wallet)
+[CS50x - CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/) | Wide range of topics in Computer Science: `binary` `c` `algorithms` `data structures` `pointers` `memory` `python` `sql` `web` | [Wallet - Track your Income & Expenses](https://github.com/hasferrr/wallet)
 
 ### Core CS
 
