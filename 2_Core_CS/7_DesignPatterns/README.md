@@ -2,7 +2,51 @@
 
 ## CREATIONAL PATTERN
 
-### Factory Object
+### Singleton
+
+If a class has a public constructor, an object of this class can be instantiated at any time.
+
+```java
+public class notSingleton {
+// Public Constructor
+    public notSingleton() {
+        // code
+    }
+}
+```
+
+Private constructor
+
+```java
+public class ExampleSingleton {
+    // lazy construction
+    // the class variable is null if no instance is
+    // instantiated
+    private static ExampleSingleton uniqueInstance = null;
+
+
+    private ExampleSingleton() {
+        // ...
+    }
+
+
+    // lazy construction of the instance
+    public static ExampleSingleton getInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new ExampleSingleton();
+        }
+        return uniqueInstance;
+    }
+
+    // ...
+}
+```
+
+In real use, there may be variations of how Singleton is realized because design patterns are defined by purpose and not exact code.
+
+### Factory Design Pattern
+
+#### Factory Object
 
 ```java
 public class KnifeFactory {
@@ -45,7 +89,7 @@ public class KnifeStore {
 }
 ```
 
-### Factory Method Pattern
+#### Factory Method Pattern
 
 ```java
 public abstract class KnifeStore {
