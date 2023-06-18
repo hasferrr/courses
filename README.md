@@ -4,7 +4,11 @@
 
 ## Summary
 
-This is online computer science courses I took and am currently going through. I mostly followed the [OSSU](https://github.com/ossu/computer-science) curriculum. The files in this repository mostly contain my solutions, materials, lecture notes, problem sets, quizzes, and the final project for each course.
+This is online computer science courses I took and am currently going through.
+
+I mostly followed the [OSSU](https://github.com/ossu/computer-science) curriculum that matches the curricular standards of the [CS 2013](https://github.com/ossu/computer-science/blob/master/CURRICULAR_GUIDELINES.md): Curriculum Guidelines for Undergraduate Degree Programs in Computer Science.
+
+The files in this repository mostly contain my solutions, materials, lecture notes, problem sets, quizzes, and the final project for each course.
 
 > *taking computer science courses while in college (because I'm  currently studying Accounting in university (not CS, not IT)) is quite difficult because I have to divide my time between them, but I enjoy it.*
 
