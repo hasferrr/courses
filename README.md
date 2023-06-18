@@ -23,7 +23,7 @@ Some CS Courses I took and currently doing.
 Courses | Topics | Final Project
 :-- | :--: | :--:
 Programming tutorial in YouTube/Internet | `variable` `loop` `datatype` `function` `programming` | -
-[CS50x - CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/) | Wide range of topics in Computer Science: `binary` `c` `algorithms` `data structures` `pointers` `memory` `python` `sql` `web` | [Wallet - Track your Income & Expenses](https://github.com/hasferrr/wallet)
+[CS50x - CS50's Introduction to Computer Science](https://cs50.harvard.edu/x/2022/) | Wide range of topics in Computer Science: `binary` `c` `algorithms` `data structures` `pointers` `memory` `python` `sql` `web` | [Wallet - Track your Income & Expenses](https://github.com/hasferrr/wallet), [Certificate](https://cs50.harvard.edu/certificates/69a14d5d-59ed-4592-94da-211ea6c287c7)
 
 ### Core CS
 
