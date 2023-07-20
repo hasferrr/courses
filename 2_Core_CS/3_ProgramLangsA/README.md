@@ -1,9 +1,5 @@
 # Programming Languages A
 
-## My Certificate
-
-[https://www.coursera.org/account/accomplishments/certificate/Y9LAEKAMR8J5](https://www.coursera.org/account/accomplishments/certificate/Y9LAEKAMR8J5)
-
 ## Materials
 
 Slides and Lecture Notes

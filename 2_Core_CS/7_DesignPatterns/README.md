@@ -213,6 +213,8 @@ public class Customer {
 
 ### Adapter pattern
 
+The adapter design pattern facilitates communication between two existing systems by providing a compatible interface
+
 ```java
 public interface WebRequester {
     public int request(Object);
@@ -518,6 +520,267 @@ public class Program {
         myPage = new AuthorizedWebPage(myPage);
         myPage = new AuthenticatedWebPage(myPage);
         myPage.display();
+    }
+}
+```
+
+## BEHAVIOURAL PATTERN
+
+### Template Method Pattern
+
+The template method pattern defines an algorithm’s steps generally, by deferring the implementation of some steps to subclasses. In other words, it is concerned with the assignment of responsibilities.
+
+```java
+public abstract class PastaDish { //abstract class
+    final void makeRecipe() { //template method
+        boilWater();
+        addPasta();
+        cookPasta();
+        drainAndPlate();
+        addSauce();
+        addProtein();
+        addGarnish();
+    }
+    abstract void addPasta();
+    abstract void addSauce();
+    abstract void addProtein();
+    abstract void addGarnish();
+    private void boilWater() {
+        System.out.println("Boiling water");
+    }
+    ...
+}
+```
+
+```java
+public class SpaghettiMeatballs extends PastaDish {
+    public void addPasta() {
+        System.out.println("Add spaghetti");
+    }
+    public void addProtein() {
+        System.out.println("Add meatballs");
+    }
+    public void addSauce() {
+        System.out.println("Add tomato sauce");
+    }
+    public void addGarnish() {
+        System.out.println("Add Parmesan cheese");
+    }
+}
+```
+
+```java
+public class PenneAlfredo extends PastaDish {
+    public void addPasta() {
+        System.out.println("Add penne");
+    }
+    public void addProtein() {
+        System.out.println("Add chicken");
+    }
+    public void addSauce() {
+        System.out.println("Add Alfredo sauce");
+    }
+    public void addGarnish() {
+        System.out.println("Add parsley");
+    }
+}
+```
+
+### Chain of Responsibility Pattern
+
+- A chain of objects that are responsible for handling requests.
+- The first handler in the chain will try to process it.
+- If the handler can process the request, then the request ends with this handler.
+- However, if the handler cannot handle the request, then the request is sent to the next handler in the chain.
+- This pattern is similar to exception handling in Java (a series of try/catch blocks)
+
+```java
+Operation_A() {
+    try {
+        Operation_B()
+    }
+    catch (Exception e1) {
+        // try this
+    }
+}
+
+Operation_B() {
+    try {
+        Operation_C()
+    }
+    catch (Exception e1) {
+        // try this
+    }
+}
+
+Operation_C() {
+    try {
+        // throw exception
+    }
+    catch (Exception e1) {
+        // try this
+    }
+}
+```
+
+Each filter needs to go through the following steps:
+
+1. Check if the rule matches.
+2. If it matches, do something specific.
+3. If it doesn’t match, call the next filter in the list.
+
+### State Pattern
+
+- Objects in your code are aware of their current state.
+- They can choose an appropriate behavior based on their current state.
+- When their current state changes, this behavior can be altered - this is the state design pattern.
+
+Let us examine the state *interface* as code. State classes must implement the methods in this interface to respond to each trigger.
+
+```java
+public interface State {
+    public void insertDollar( VendingMachine vendingMachine );
+    public void ejectMoney( VendingMachine vendingMachine );
+    public void dispense( VendingMachine vendingMachine );
+}
+```
+
+Now, let us examine the *for each State* class:
+
+```java
+public class IdleState implements State {
+    public void insertDollar( VendingMachine vendingMachine ) {
+        System.out.println( "dollar inserted" );
+        vendingMachine.setState(
+            vendingMachine.getHasOneDollarState()
+        );
+    }
+    public void ejectMoney( VendingMachine vendingMachine ) {
+        System.out.println( "no money to return" );
+    }
+    public void dispense( VendingMachine vendingMachine ) {
+        System.out.println( "payment required" );
+    }
+}
+```
+
+```java
+public class HasOneDollarState implements State {
+    public void insertDollar( VendingMachine vendingMachine ) {
+        System.out.println( "already have one dollar" );
+    }
+    public void ejectMoney( VendingMachine vendingMachine ) {
+        System.out.println( "returning money" );
+        vendingMachine.doReturnMoney();
+        vendingMachine.setState(
+            vendingMachine.getIdleState()
+        );
+    }
+    public void dispense( VendingMachine vendingMachine ) {
+        System.out.println( "releasing product" );
+        if (vendingMachine.getCount() > 1) {
+            vendingMachine.doReleaseProduct();
+            vendingMachine.setState(
+                vendingMachine.getIdleState());
+        } else {
+            vendingMachine.doReleaseProduct();
+            vendingMachine.setState(
+                vendingMachine.getOutOfStockState());
+        }
+    }
+}
+```
+
+```java
+public class OutOfStockState implements State {
+    public void insertDollar( VendingMachine vendingMachine ) { ... }
+    public void ejectMoney( VendingMachine vendingMachine ) { ... }
+    public void dispense( VendingMachine vendingMachine ) { ... }
+}
+```
+
+```java
+public class PopMachine {
+    private State idleState;
+    private State hasOneDollarState;
+    private State outOfStockState;
+    private State currentState;
+    private int count;
+
+    public PopMachine( int count ) {
+
+        // make the needed states
+        idleState = new IdleState();
+        hasOneDollarState = new HasOneDollarState();
+        outOfStockState = new OutOfStockState();
+
+        if (count > 0) {
+            currentState = idleState;
+            this.count = count;
+        } else {
+            currentState = outOfStockState;
+            this.count = 0;
+        }
+    }
+}
+```
+
+### Command Pattern
+
+In general, when an object makes a request for a second object to do an action, the first object would call a method of the second object and the second object would complete the task. There is direct communication between the sender and receiver object.
+
+The *command pattern* creates a command object *between* the sender and receiver.
+
+This way, the sender does not have to know about the receiver and the methods to call.
+
+In a command pattern, a sender object can create a command object.
+
+### Mediator Pattern
+
+[Mediator-Pattern](Mediator-Pattern.pdf)
+
+### Observer Pattern
+
+The **observer design pattern** is a pattern where a **subject** keeps a list of **observers**.
+
+Observers rely on the subject to inform them of changes to the state of the subject.
+
+- There is generally a **Subject superclass**, which would have an attribute to keep track of all the observers
+- There is also an **Observer interface** with a method, so that an observer can be notified of state changes to the subject
+- The *Subject superclass* may also have **subclasses** that implement the *Observer interface*.
+- These elements create the **relationship** between the subject and observer.
+
+```java
+public class Subject {
+    private ArrayList<Observer> observers = new ArrayList<Observer>();
+
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+    public void unregisterObserver(Observer observer) {
+        observers.remove(observer);
+    }
+    public void notify() {
+        for (Observer o : observers) {
+            o.update();
+        }
+    }
+}
+```
+
+The Observer interface would be as below:
+
+```java
+public interface Observer {
+    public void update();
+}
+```
+
+```java
+class Subscriber implements Observer {
+    public void update() {
+    // get the blog change
+        ...
     }
 }
 ```
