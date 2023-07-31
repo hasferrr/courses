@@ -1,6 +1,26 @@
 # Design Pattern (Code)
 
-## CREATIONAL PATTERN
+PDF: [Design-Patterns-COURSE-NOTES-Updated-July-2021.pdf](Design-Patterns-COURSE-NOTES-Updated-July-2021.pdf)
+
+- [Creational Patern](#creational-pattern)
+    - [Singleton](#singleton)
+    - [Factory Design Pattern](#factory-design-pattern)
+- [Structural Pattern](#structural-pattern)
+    - [Facade pattern](#facade-pattern)
+    - [Adapter pattern](#adapter-pattern)
+    - [Composite pattern](#composite-pattern)
+    - [Proxy pattern](#proxy-pattern)
+    - [Decorator pattern](#decorator-pattern)
+- [Behavioural Pattern](#behavioural-pattern)
+    - [Template Method Pattern](#template-method-pattern)
+    - [Chain of Responsibility Pattern](#chain-of-responsibility-pattern)
+    - [State Pattern](#state-pattern)
+    - [Command Pattern](#command-pattern)
+    - [Mediator Pattern](#mediator-pattern)
+    - [Observer Pattern](#observer-pattern)
+- [MVC Pattern](#model-view-controller-mvc-pattern)
+
+## Creational Patern
 
 ### Singleton
 
@@ -134,7 +154,7 @@ public BudgetKnifeStore extends KnifeStore {
 
 ```
 
-## STRUCTURAL PATTERN
+## Structural Pattern
 
 ### Facade pattern
 
@@ -524,7 +544,7 @@ public class Program {
 }
 ```
 
-## BEHAVIOURAL PATTERN
+## Behavioural Pattern
 
 ### Template Method Pattern
 
@@ -781,6 +801,168 @@ class Subscriber implements Observer {
     public void update() {
     // get the blog change
         ...
+    }
+}
+```
+
+## Model, View, Controller (MVC) pattern
+
+- MVC patterns divide the responsibilities of a system
+- considered for use with user interfaces
+- MVC pattern is the separation of concerns between the back-end, the front-end, and the coordination between the two
+- Models *updates* the View using Observer pattern
+
+#### Model
+
+- Model is going to contain the underlying data, state, and logic
+- M should be able to exist independently, without V or C
+- since the view is going to be an observer, the model needs to be observable
+- model does not contain any user interface
+- has several methods that modify itself
+
+```java
+import java.util.*;
+
+public class StoreOrder extends Observable {
+
+    private ArrayList<String> itemList;
+    private ArrayList<BigDecimal> priceList;
+
+    public StoreOrder() {
+        itemList = new ArrayList<String>();
+        priceList = new ArrayList<BigDecimal>();
+    }
+
+    public String getItem( int itemNum ) {
+        return itemList.get(itemNum);
+    }
+
+    public String getPrice( int itemNum ) {
+        return priceList.get(itemNum);
+    }
+
+    public ListIterator<String> getItemList() {
+        ListIterator<String> itemItr = itemList.listIterator();
+        return itemItr;
+    }
+
+    public ListIterator<BigDecimal> getPriceList() {
+        ListIterator<String> priceItr = priceList.listIterator();
+        return priceItr;
+    }
+
+    public void deleteItem( int itemNum ) {
+        itemList.remove(itemNum);
+        priceList.remove(itemNum);
+        setChanged();
+        notifyObservers();
+    }
+
+    public void addItem( int barcode ) {
+        // code to add item (probably used with a scanner)
+        // prices are looked up from a database
+        ...
+        setChanged();
+        notifyObservers();
+    }
+
+    public void changePrice( int itemNum, BigDecimal newPrice ) {
+        priceList.set(itemNum,newPrice);
+        setChanged();
+        notifyObservers();
+    }
+}
+```
+
+#### View
+
+- View gives users the way to see the model
+- view is an observer
+- OrderView class implements the Observer interface
+- view cannot call the method of the Model
+- but instead calls the methods of the Controller
+
+```java
+import java.util.*;
+import javax.swing.JFrame;
+// ..etc.
+
+public class OrderView extends JPanel implements Observer, ActionListener {
+    // Controller
+    private OrderController controller;
+
+    // User-Interface Elements
+    private JFrame frame;
+    private JButton changePriceButton;
+    private JButton deleteItemButton;
+    private JTextField newPriceField;
+    private JLabel totalLabel;
+    private JTable groceryList;
+
+    public OrderView(OrderController controller) {
+        this.controller = controller;
+        createUI();
+    }
+
+    private void createUI() {
+        // Initialize UI elements. e.g.:
+        deleteItemButton = new JButton("Delete Item");
+        add(deleteItemButton);
+        ...
+        // Add listeners. e.g.:
+        deleteItemButton.addActionListener(this);
+        ...
+    }
+
+    public void update ( Observable s, Object arg ) {
+        display(((StoreOrder) s).getItemList(), ((StoreOrder)s).getPriceList());
+    }
+
+    public void display ( ArrayList itemList, ArrayList priceList ) {
+        // code to display order
+        ...
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == deleteItemButton) {
+            controller.deleteItem(groceryList.getSelectedRow());
+        }
+        else if (event.getSource() == changePriceButton) {
+            BigDecimal newPrice = new
+            BigDecimal(newPriceField.getText());
+            controller.changePrice(groceryList.getSelectedRow(), newPrice);
+        }
+    }
+}
+```
+
+#### Controller
+
+- Controller is responsible for:
+    - interpreting requests and interacts with elements in the **view**, and
+    - changing the **model**
+- controller must have references to both the view and model
+- Controller does not make changes to the state of the model directly
+- Instead, it *calls methods of the model* to make changes
+- controller takes the responsibility of interpreting the input from the user
+
+```java
+public class OrderController {
+
+    private StoreOrder storeOrder;
+    private OrderView orderView;
+
+    public OrderController(StoreOrder storeOrder, OrderView orderView) {
+        this.storeOrder = storeOrder;
+        this.orderView = orderView;
+    }
+
+    public void deleteItem( int itemNum ) {
+        storeOrder.deleteItem( itemNum );
+    }
+
+    public void changePrice(int itemNum, BigDecimal newPrice) {
+        storeOrder.changePrice( itemNum, newPrice );
     }
 }
 ```
