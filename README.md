@@ -36,6 +36,6 @@ Courses | Topics | Final Project
 [Programming Languages, Part A](https://www.coursera.org/learn/programming-languages) | `static typing` `functions` `recursion` `scope` `pattern-matching` `first-class` `closures` `type inference` | [Certificate](https://www.coursera.org/account/accomplishments/verify/Y9LAEKAMR8J5)
 [Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b) | `dynamic typing` `delayed evaluation` `streams` `macros` `interpreters` `closures` `static checking` | [Certificate](https://www.coursera.org/account/accomplishments/verify/HQYP2T5BK5FA)
 [Programming Languages, Part C](https://www.coursera.org/learn/programming-languages-part-c) | `object-oriented programming` `double dispatch` `multiple inheritance` `mixins` `subtyping` `polymorphism` | [Certificate](https://www.coursera.org/account/accomplishments/verify/BCBPTHQDZVNA)
-[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) | `oop` `object-oriented design` `uml` `diagrams` | [Capstone](2_Core_CS/6_ObjectOrientedDesign)
-[Design Patterns](https://www.coursera.org/learn/design-patterns) | | *(doing)*
-[Software Architecture](https://www.coursera.org/learn/software-architecture) |
+[Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) | `oop` `object-oriented design` `uml` `diagrams` | [Materials](2_Core_CS/6_ObjectOrientedDesign)
+[Design Patterns](https://www.coursera.org/learn/design-patterns) | `design patterns` `creational` `structural` `behavioral` `mvc` `anti-patterns` | [Materials](2_Core_CS/7_DesignPatterns)
+[Software Architecture](https://www.coursera.org/learn/software-architecture) | | *(doing)*
