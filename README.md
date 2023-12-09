@@ -39,3 +39,9 @@ Courses | Topics | Final Project
 [Object-Oriented Design](https://www.coursera.org/learn/object-oriented-design) | `oop` `object-oriented design` `uml` `diagrams` | [Materials](2_Core_CS/6_ObjectOrientedDesign)
 [Design Patterns](https://www.coursera.org/learn/design-patterns) | `design patterns` `creational` `structural` `behavioral` `mvc` `anti-patterns` | [Materials](2_Core_CS/7_DesignPatterns)
 [Software Architecture](https://www.coursera.org/learn/software-architecture) | | *(doing)*
+
+#### Core Math
+
+Courses | Topics | Final Project
+:-- | :--: | :--:
+[Mathematics for Computer Science](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/about) | `discrete math` `proofs` `structures` `counting` `probability` | *(doing)*
