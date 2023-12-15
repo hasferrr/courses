@@ -1,8 +1,13 @@
 # Mathematics for Computer Science (Discrete Math)
 
+- 2010 <https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/>
+- 2015 <https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019>
+
 ## 2010
 
 [6.042J Complete course notes (Fall 2010 version)](2010/6.042J-Complete-course-notes-Fall-2010.pdf)
+
+[Playlist](https://www.youtube.com/playlist?list=PLB7540DEDD482705B)
 
 ## 2015
 
