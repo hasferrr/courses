@@ -42,6 +42,6 @@ Some CS Courses I took and currently doing.
 
 #### Core Math
 
-| Courses                                                                                                           |                             Topics                             | Final Project |
-| :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------: | :-----------: |
-| [Mathematics for Computer Science](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/about) | `discrete math` `proofs` `structures` `counting` `probability` |   _(doing)_   |
+| Courses                                                                                                                                         |                             Topics                             | Final Project |
+| :---------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------: | :-----------: |
+| [Discrete Mathematics](3_Core_Math/DiscreteMath) ([Math for CS](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/about)) | `discrete math` `proofs` `structures` `counting` `probability` |   _(doing)_   |
