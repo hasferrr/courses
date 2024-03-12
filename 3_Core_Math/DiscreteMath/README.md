@@ -6,7 +6,7 @@ Book: [Discrete Mathematics with Applications 5th Edition](https://www.amazon.co
 
 ## Course
 
-- 2023 Course Link: <https://cs1311-s23.github.io/>
+- 2023 Course Link: <https://cs1311-s23.github.io/schedule.html>
 - 2019 and 2016 version: <https://www2.seas.gwu.edu/~ayoussef/cs1311/>
 
 ## PSETS
