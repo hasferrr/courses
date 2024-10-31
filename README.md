@@ -52,6 +52,12 @@ Some CS Courses I took and currently doing.
 | :------------------------------------------------------------------------------------------------------------------------------- | :----: | :-----------: |
 | [Divide and Conquer, Sorting and Searching, and Randomized Algorithms](https://www.coursera.org/learn/algorithms-divide-conquer) |        |   _(doing)_   |
 
+#### Core Systems
+
+| Courses                                        | Topics | Final Project |
+| :--------------------------------------------- | :----: | :-----------: |
+| [Nand To Tetris](https://www.nand2tetris.org/) |        |   _(doing)_   |
+
 ### Final Projects (Other)
 
 | Courses                                                                                                 |                                                             Description                                                              |                                                   Topics                                                   |                                                                                                                                                                                                                         Final Project                                                                                                                                                                                                                          |
