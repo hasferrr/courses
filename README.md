@@ -54,9 +54,9 @@ Some CS Courses I took and currently doing.
 
 #### Core Systems
 
-| Courses                                        | Topics | Final Project |
-| :--------------------------------------------- | :----: | :-----------: |
-| [Nand To Tetris](https://www.nand2tetris.org/) |        |   _(doing)_   |
+| Courses                                                                                            | Topics | Final Project |
+| :------------------------------------------------------------------------------------------------- | :----: | :-----------: |
+| [Build a Modern Computer from First Principles: From Nand to Tetris](https://www.nand2tetris.org/) |        |   _(doing)_   |
 
 ### Final Projects (Other)
 
